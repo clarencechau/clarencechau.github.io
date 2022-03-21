@@ -6,23 +6,23 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className="hero-container">
-      <video src="/videos/video-2.mp4" autoPlay loop muted />
-      <h1>ADVENTURE AWAITS</h1>
-      <p>What are you waiting for?</p>
+      <video src="/videos/backgroundvideo3.mp4" autoPlay loop muted/>
+      <h1>Hello world!</h1>
+      <p>Welcome to my website!</p>
       <div className="hero-btns">
         <Button
           className="btns"
-          buttonStyle="btn--outline"
+          buttonStyle="btn--primary"
           buttonSize="btn--large"
         >
-          GET STARTED
+          GitHub <i className='fab fa-github' />
         </Button>
         <Button
           className="btns"
           buttonStyle="btn--primary"
           buttonSize="btn--large"
         >
-          WATCH TRAILER <i className='far fa-play-circle' />
+          LinkedIn <i className='fab fa-linkedin' />
         </Button>
       </div>
     </div>
