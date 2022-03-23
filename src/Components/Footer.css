@@ -167,6 +167,10 @@
   flex-direction: column;
 }
 
+.button {
+  width: 150px;
+}
+
 /* Mobile */
 @media screen and (max-width: 820px) {
     .footer-links {

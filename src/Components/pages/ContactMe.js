@@ -1,7 +1,10 @@
+import Footer from "../Footer";
+
 function ContactMe() {
     return (
       <>
-        <p>Contact Me</p>
+      <p>helloo</p>
+        <Footer />
       </>
     );
   }

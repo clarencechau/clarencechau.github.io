@@ -7,7 +7,7 @@ import { useForm, ValidationError } from "@formspree/react";
 function Footer() {
   const [state, handleSubmit] = useForm("xgedzjbn");
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    <Footer />
   }
   return (
     <div className="footer-container">
@@ -28,33 +28,35 @@ function Footer() {
               className="form"
             >
               <label htmlFor="email">Email Address</label>
-              <input placeholder="Email" id="email" type="email" className="email" />
+              <input
+                placeholder="Email"
+                id="email"
+                type="email"
+                className="email"
+                name="mail"
+              />
               <ValidationError
                 prefix="Email"
                 field="email"
                 errors={state.errors}
               />
-              <textarea placeholder="Comments" id="message" className="message" />
+              <textarea
+                placeholder="Comments"
+                id="message"
+                className="message"
+                name="message"
+              />
               <ValidationError
                 prefix="Message"
                 field="message"
                 errors={state.errors}
               />
-              <button type="submit" disabled={state.submitting}>
+              <button className="button" type="submit" disabled={state.submitting}>
                 Submit
               </button>
             </form>
           </div>
         </section>
-        <div className="footer-links">
-          <div className="footer-link-wrapper">
-            <div className="footer-link-items">
-              <h2>HELLOOOO</h2>
-              <Link to="/sign-up">How it works</Link>
-              <Link to="/">Testimonials</Link>
-            </div>
-          </div>
-        </div>
       </div>
       <section className="social-media">
         <div className="social-media-wrap">
