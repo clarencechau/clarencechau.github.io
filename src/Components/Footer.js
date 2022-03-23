@@ -2,40 +2,57 @@ import React from "react";
 import { Button } from "./Button";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import { useForm, ValidationError } from "@formspree/react";
 
 function Footer() {
+  const [state, handleSubmit] = useForm("xgedzjbn");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
   return (
     <div className="footer-container">
-      <section className="footer-subscription">
-        <p className="footer-subscription-heading">
-          Join the Adventure newsletter to receive our best vacation deals
-        </p>
-        <p className="footer-subscription-text">
-          You can unsubscribe at any time.
-        </p>
-        <div className="input-area">
-          <form>
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              className="footer-input"
-            />
-            <Button buttonStyle="btn--outline">Subscribe</Button>
-          </form>
-        </div>
-      </section>
-      <div className="footer-links">
-        <div className="footer-link-wrapper">
-          <div className="footer-link-items">
-            <h2>About Me</h2>
-            <Link to="/sign-up">How it works</Link>
-            <Link to="/">Testimonials</Link>
+      <div className="footer-row">
+        <section className="footer-contact">
+          <p className="footer-subscription-heading">
+            If you would like to contact me, enter your email and any comments
+            below.
+          </p>
+          <p className="footer-subscription-text">
+            Thanks for stopping by my website!
+          </p>
+          <div className="input-area">
+            <form
+              onSubmit={handleSubmit}
+              action="https://formspree.io/f/xgedzjbn"
+              method="post"
+              className="form"
+            >
+              <label htmlFor="email">Email Address</label>
+              <input placeholder="Email" id="email" type="email" className="email" />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
+              <textarea placeholder="Comments" id="message" className="message" />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
+              <button type="submit" disabled={state.submitting}>
+                Submit
+              </button>
+            </form>
           </div>
-          <div className="footer-link-items">
-            <h2>HELLOOOO</h2>
-            <Link to="/sign-up">How it works</Link>
-            <Link to="/">Testimonials</Link>
+        </section>
+        <div className="footer-links">
+          <div className="footer-link-wrapper">
+            <div className="footer-link-items">
+              <h2>HELLOOOO</h2>
+              <Link to="/sign-up">How it works</Link>
+              <Link to="/">Testimonials</Link>
+            </div>
           </div>
         </div>
       </div>
@@ -43,14 +60,13 @@ function Footer() {
         <div className="social-media-wrap">
           <div className="footer-logo">
             <Link to="/" className="social-logo">
-              TRVL <i className="fab fa-typo3" />
+              <i className="fas fa-wave-square" /> Clarence Chau
             </Link>
           </div>
-          <small className="website-rights">TRVL 2020</small>
           <div className="social-icons">
             <Link
               className="social-icon-link facebook"
-              to="/"
+              to={{ pathname: "https://www.facebook.com/clementjm86" }}
               target="_blank"
               aria-label="Facebook"
             >
@@ -58,11 +74,31 @@ function Footer() {
             </Link>
             <Link
               className="social-icon-link instagram"
-              to="/"
+              to={{
+                pathname: "https://www.instagram.com/clarence.chauu/?hl=en",
+              }}
               target="_blank"
               aria-label="Instagram"
             >
               <i className="fab fa-instagram"></i>
+            </Link>
+            <Link
+              className="social-icon-link linkedin"
+              to={{
+                pathname: "https://ca.linkedin.com/in/clarence-chau-3a827b1b7",
+              }}
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i className="fab fa-linkedin"></i>
+            </Link>
+            <Link
+              className="social-icon-link github"
+              to={{ pathname: "https://github.com/clarencechau" }}
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i className="fab fa-github"></i>
             </Link>
           </div>
         </div>

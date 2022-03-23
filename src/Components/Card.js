@@ -10,26 +10,46 @@ function Card() {
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CardItem
-              src="images/img-9.jpg"
-              text="My Personal Website"
-              label="ReactJS"
-              path="/services"
-            />
-            <CardItem
-              src="images/img-2.jpg"
-              text="Three Musketeers"
+              src="images/gungeon.png "
+              text="Gungeon"
               label="Java"
-              path="/services"
+              path={{ pathname: "https://github.com/clarencechau/Gungeon"}}
+              target="_blank"
             />
             <CardItem
-              src="images/img-4.jpg"
+              src="images/threemusketeers.png"
+              text="Three Musketeers Simulator"
+              label="Java"
+              path={{ pathname: "https://github.com/clarencechau/ThreeMusketeers"}}
+              target="_blank"
+            />
+          </ul>
+          <ul className="cards__items">
+            <CardItem
+              src="images/badmintonzone.png"
+              text="Badminton Zone"
+              label="HTML"
+              path={{ pathname: "http://www.badmintonzone.ca/"}}
+              target="_blank"
+            />
+            <CardItem
+              src="images/taskmanagerapp.png"
+              text="Task Manager Application"
+              label="React Native"
+              path={{ pathname: "https://github.com/clarencechau/Task-Application"}}
+              target="_blank"
+            />
+            <CardItem
+              src="images/meepoisyou.png"
               text="Meepo is You"
               label="Python"
-              path="/services"
+              path={{ pathname: "https://github.com/clarencechau/Meepo-Is-You"}}
+              target="_blank"
             />
           </ul>
         </div>
       </div>
+      
     </div>
   );
 }

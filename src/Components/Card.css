@@ -8,7 +8,6 @@ h1 {
 }
 
 .cards__container {
-  display: flex;
   flex-flow: column;
   align-items: center;
   max-width: 1120px;
@@ -96,6 +95,12 @@ h1 {
 .cards__item__text {
   color: #252e48;
   font-size: 18px;
+  line-height: 24px;
+}
+
+.cards__item__minitext {
+  color: #252e48;
+  font-size: 14px;
   line-height: 24px;
 }
 

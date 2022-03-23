@@ -1,0 +1,21 @@
+.about {
+    padding: 4rem;
+    background: #fff;
+}
+
+.container {
+    display: flex;
+}
+
+.information{
+    display: flex;
+    flex: 1;
+    ;
+}
+
+.picture {
+    display: flex;
+    flex: 1;
+    height: auto;
+    width: auto;
+}
