@@ -20,6 +20,7 @@ function Footer() {
           <p className="footer-subscription-text">
             Thanks for stopping by my website!
           </p>
+          <label htmlFor="email">Email Address</label>
           <div className="input-area">
             <form
               onSubmit={handleSubmit}
@@ -27,7 +28,6 @@ function Footer() {
               method="post"
               className="form"
             >
-              <label htmlFor="email">Email Address</label>
               <input
                 placeholder="Email"
                 id="email"

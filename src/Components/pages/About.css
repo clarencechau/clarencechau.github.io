@@ -1,21 +1,56 @@
 .about {
-    padding: 4rem;
-    background: #fff;
+  padding: 4rem;
+  background: #fff;
 }
 
-.container {
-    display: flex;
+.sides {
+  margin-bottom: 24px;
 }
 
-.information{
-    display: flex;
-    flex: 1;
-    ;
+.information {
+  flex: 1;
+  margin: 6px;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem;
 }
 
 .picture {
+  display: flex;
+  flex: 1;
+  height: 700px;
+  width: auto;
+}
+
+.things-i-enjoy {
+  
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.thing {
+  
+}
+
+.image {
+    
+}
+
+.image-description {
+    
+}
+
+@media only screen and (min-width: 1024px) {
+  .sides {
     display: flex;
-    flex: 1;
-    height: auto;
-    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cards__item {
+    margin-bottom: 2rem;
+  }
 }

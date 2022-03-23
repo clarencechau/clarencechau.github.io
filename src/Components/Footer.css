@@ -33,6 +33,7 @@
 .footer-subscription-heading {
   margin-bottom: 24px;
   font-size: 24px;
+  width: 80%;
 }
 
 .footer-subscription-text {
@@ -143,7 +144,7 @@
 }
 
 .email {
-  width: 100%;
+  width: 380px;
   justify-content: center;
   align-self: center;
   align-items: center;
@@ -151,7 +152,7 @@
 }
 
 .message {
-  width: 100%;
+  width: 380px;
   height: 100px;
 }
 
