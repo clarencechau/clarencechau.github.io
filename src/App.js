@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -10,6 +10,9 @@ import ScrollToTop from "./Components/ScrollToTop";
 
 
 function App() {
+  useEffect(() => {
+    document.title = "Clarence's Website"
+  }, [])
   return (
     <>
       <Router>
