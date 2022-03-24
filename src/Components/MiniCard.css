@@ -1,3 +1,37 @@
 .things {
-    margin-left: 140px;
+    padding-left: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.image {
+    font-size: 40px;
+}
+
+.image-title {
+    text-align: center;
+}
+
+.image-description {
+    width: 100%;
+}
+
+@media only screen and (min-width: 1024) {
+    .things {
+        display: flex;
+    }
+
+    .image-description {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 1024) {
+    .things {
+        margin-bottom: 2rem;
+    }
+
+    .image-description {
+        margin-bottom: 6rem;
+    }
 }

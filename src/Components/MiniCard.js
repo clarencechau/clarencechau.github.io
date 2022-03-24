@@ -9,7 +9,7 @@ function MiniCard(props) {
                     <i className={props.image}></i>
                 </div>
                 <div className="image-title">
-                    <h3>{props.title}</h3>
+                    <h2>{props.title}</h2>
                 </div>
                 <div className="image-description">
                     <h4>{props.description}</h4>

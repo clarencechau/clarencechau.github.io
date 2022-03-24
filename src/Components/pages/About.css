@@ -1,5 +1,18 @@
 .about {
   padding: 4rem;
+  background: #f2efe7;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+.who-am-i {
+  margin-left: 20px;
 }
 
 .information {
@@ -9,7 +22,8 @@
 .picture {
   border-style: groove;
   border-width: 20px;
-  max-width: 30%;
+  width: 500px;
+  height: 500px;
 }
 
 .sides {
@@ -19,25 +33,42 @@
 .things-i-enjoy {
   margin-top: 20px;
   width: 100%;
-  display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-left: 50px;
+  position: relative;
+
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1300px) {
   .sides {
     display: flex;
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1300px) {
   .cards__item {
     margin-bottom: 2rem;
   }
 
-  
   .picture {
-    margin-left: 50%;
+    height: 450px;
+    width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .things-i-enjoy {
+    text-align: center;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .things-i-enjoy {
+    text-align: center;
+    margin-bottom: 2rem;
   }
 }
