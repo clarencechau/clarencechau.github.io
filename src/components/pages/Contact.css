@@ -1,0 +1,157 @@
+.contact {
+  font-family: "Inter", sans-serif;
+  overflow-y: auto;
+}
+
+.back-button-container {
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: flex;
+}
+
+.back-button {
+  right: 0;
+  top: 0;
+  display: flex;
+  position: fixed;
+  transition: transform 0.15s ease-in-out;
+}
+
+.back-button:hover {
+  transform: scale(1.05);
+}
+
+.back-text {
+  padding-top: 10px;
+  font-family: "inter", sans-serif;
+  text-decoration: none;
+}
+
+.back-icon {
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+.contact-container {
+}
+
+.contact-content {
+  flex: 1;
+  width: 60%;
+  margin-top: 100px;
+  margin-left: 460px;
+  margin-bottom: 200px;
+}
+
+.contact-tag {
+  color: #afbfd6;
+  line-height: "4";
+  margin-bottom: 40px;
+}
+
+.contact-pictures {
+  left: 0;
+  position: fixed;
+  bottom: 0;
+  flex-direction: column;
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.contact-picture {
+  height: 240px;
+  width: 240px;
+  padding: 10px;
+  padding-right: 20px;
+}
+
+.lets-connect {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.connect-email {
+  font-size: 25px;
+  color: #603bc5;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dotted #212a36;
+}
+
+.contact-text {
+  line-height: 1.6;
+}
+
+@media (max-width: 960px) {
+  .contact-content {
+    margin-left: 80px;
+  }
+
+  .back-button {
+    position: absolute;
+
+  }
+
+  .connect-email {
+    font-size: 20px;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 660px) {
+  .contact-content {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-content {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-content {
+    margin-left: 20px;
+  }
+
+  .connect-email {
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 2000px) {
+  .contact-content {
+    margin-left: 450px;
+  }
+
+  .contact-picture {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (min-width: 2250px) {
+  .contact-content {
+    margin-left: 550px;
+  }
+}
+
+@media (max-height: 830px) {
+  .contact-picture {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-height: 750px) {
+  .contact-picture {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+
+

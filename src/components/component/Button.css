@@ -1,0 +1,86 @@
+.explore-button {
+  background-color: #7a4fee;
+  color: white;
+  border: none;
+  padding: 15px 56px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-family: "inter", sans-serif;
+  letter-spacing: 0.2px;
+  margin-bottom: 100px;
+  margin-left: 40px;
+}
+
+.explore-button:hover {
+  background-color: #603bc5;
+}
+
+.about-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-family: "inter", sans-serif;
+  letter-spacing: 0.2px;
+  margin-bottom: 45px;
+  margin-left: 4px;
+  word-spacing: 2px;
+  padding: 12px 35px;
+}
+
+.contact-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-family: "inter", sans-serif;
+  letter-spacing: 0.2px;
+  margin-bottom: 45px;
+  margin-left: 105px;
+  word-spacing: 2px;
+  padding: 12px 35px;
+}
+
+.back-button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  display: flex;
+  font-size: 1.4rem;
+  padding-top: 30px;
+  padding-right: 35px;
+  cursor: pointer;
+}
+
+.connect-button {
+  background-color: #7a4fee;
+  color: white;
+  border: none;
+  padding: 15px 56px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  font-family: "inter", sans-serif;
+  letter-spacing: 0.2px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.connect-button:hover {
+  background-color: #603bc5;
+}

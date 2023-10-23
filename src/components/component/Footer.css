@@ -1,0 +1,134 @@
+.footer {
+}
+
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: flex;
+  padding: 40px;
+}
+
+.headshot {
+  height: 80px;
+  width: 80px;
+  border-radius: 500px;
+  left: 0;
+  /* -webkit-box-shadow: -8px 5px 50px 5px rgba(0, 0, 0, 0.48);
+  box-shadow: -8px 5px 50px 5px rgba(0, 0, 0, 0.48); */
+}
+
+.footer-text {
+  font-size: 20px;
+  padding-top: 15px;
+  padding-left: 20px;
+  text-align: left;
+  font-family: "inter", sans-serif;
+  color: white;
+}
+
+.skills-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 50%;
+}
+
+.skills {
+  padding-left: 40px;
+  list-style: none;
+  padding-top: 15px;
+  color: white;
+  font-size: 16px;
+  font-family: "inter", sans-serif;
+}
+
+.social-icons {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  color: white;
+}
+
+.a {
+  color: white;
+}
+
+.social-icon-link {
+  font-size: 30px;
+  padding-bottom: 40px;
+  z-index: 999;
+  padding-right: 20px;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon-link:hover {
+  transform: scale(1.1);
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  padding-top: 6px;
+  padding-right: 20px;
+}
+
+h {
+  color: white;
+  font-family: "inter", sans-serif;
+  padding-top: 4px;
+}
+
+.ring-container {
+  position: relative;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: #1bbe8d;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: -23px;
+}
+
+.ringring {
+  border: 3px solid #1bbe8d;
+  -webkit-border-radius: 30px;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: -31px;
+  top: -2px;
+  -webkit-animation: pulsate 2s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skills-text {
+    width: 20%;
+  }
+}

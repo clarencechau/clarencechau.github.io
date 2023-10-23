@@ -1,0 +1,125 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-email {
+}
+
+.form-email-input {
+  margin-top: 11px;
+  margin-left: 1px;
+  margin-bottom: 20px;
+  width: 700px;
+}
+
+.form-message {
+  margin-top: 11px;
+  margin-left: 1px;
+  height: 100px;
+  width: 700px;
+  resize: none;
+}
+
+.form-button {
+  background-color: #7a4fee;
+  color: white;
+  border: none;
+  padding: 15px 56px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  font-family: "inter", sans-serif;
+  letter-spacing: 0.2px;
+  margin-top: 250px;
+}
+
+.form-check-icon {
+  margin-left: 5px;
+}
+
+@media (max-width: 1200px) {
+  .form-email-input {
+    width: 550px;
+  }
+
+  .form-message {
+    width: 550px;
+  }
+
+  .contact-content {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1140px) {
+  .form-email-input {
+    width: 475px;
+  }
+
+  .form-message {
+    width: 475px;
+  }
+}
+
+@media (max-width: 560px) {
+  .form-email-input {
+    width: 450px;
+  }
+
+  .form-message {
+    width: 450px;
+  }
+}
+
+@media (max-width: 500px) {
+  .form-email-input {
+    width: 400px;
+  }
+
+  .form-message {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .form-email-input {
+    width: 350px;
+  }
+
+  .form-message {
+    width: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-email-input {
+    width: 300px;
+  }
+
+  .form-message {
+    width: 300px;
+  }
+  .form-email {
+    font-size: 18px;
+  }
+  .contact-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 340px) {
+  .contact-content {
+    width: 90%;
+  }
+  .form-email-input {
+    width: 250px;
+  }
+  .form-message {
+    width: 250px;
+  }
+  .form-email {
+    font-size: 18px;
+  }
+}

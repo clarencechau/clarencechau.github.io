@@ -1,0 +1,175 @@
+.portfolio {
+  font-family: "inter", sans-serif;
+}
+
+.back-button-container {
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: flex;
+  z-index: 500;
+}
+
+.back-text-portfolio {
+  padding-top: 10px;
+  font-family: "inter", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.back-icon-portfolio {
+  padding-left: 15px;
+  padding-top: 10px;
+  color: white;
+}
+
+.project-list-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.project-title {
+  padding-right: 345px;
+  color: white;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.project-list {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 100px;
+}
+
+.project-item {
+  cursor: pointer;
+  color: white;
+}
+
+.project-image {
+  flex: 0.5;
+  padding: 50px;
+}
+
+.project-item-text {
+  text-align: right;
+  padding-bottom: 25px;
+  padding-top: 15px;
+}
+
+.project-item-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subtext-name {
+  text-align: left;
+}
+.subtext-skill {
+  text-align: right;
+}
+
+.hover-image {
+  padding-left: 50px;
+  padding-top: 220px;
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0.5x;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid white;
+  width: 500px; /* Adjust width as required */
+  /* margin: 20px 0; Vertical spacing */
+}
+
+@media (max-width: 1170px) {
+  .hover-image {
+    padding-top: 275px;
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .hover-image {
+    padding-top: 325px;
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 960px) {
+  .project-list {
+    padding-left: 150px;
+  }
+}
+
+@media (max-width: 780px) {
+  .project-list {
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 660px) {
+  .project-list {
+    padding-left: 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-list {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .project-title {
+    padding-right: 250px;
+  }
+
+  hr {
+    width: 400px;
+  }
+}
+
+@media (max-width: 465px) {
+  .project-list {
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+  .project-title {
+    padding-right: 130px;
+  }
+
+  hr {
+    width: 350px;
+  }
+}
+
+@media (max-width: 430px) {
+  .project-list {
+    padding-left: 35px;
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  hr {
+    width: 300px;
+  }
+}
+
