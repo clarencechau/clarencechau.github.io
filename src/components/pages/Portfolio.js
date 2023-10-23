@@ -78,6 +78,7 @@ function Portfolio() {
 
   const handleClick = (site) => {
     window.open(site, "_blank");
+    console.log("opened")
   };
 
   return (
