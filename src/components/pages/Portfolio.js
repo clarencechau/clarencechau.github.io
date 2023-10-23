@@ -100,6 +100,7 @@ function Portfolio() {
         autoPlay
         loop
         muted
+        style={{ position: "absolute" }}
       />
       <div className="darken-video" />
       <div className="project-list-container">

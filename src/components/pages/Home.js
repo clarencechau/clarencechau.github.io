@@ -11,7 +11,6 @@ import MyButton from "../component/Button";
 import { motion } from "framer-motion";
 
 const Home = () => {
-  
   const [buttons, setButtons] = useState(false);
   const showButtons = () => {
     if (window.innerWidth <= 960) {
@@ -46,6 +45,7 @@ const Home = () => {
         autoPlay
         loop
         muted
+        style={{ position: "absolute" }}
       />
       <div className="darken-video" />
       <Navbar />

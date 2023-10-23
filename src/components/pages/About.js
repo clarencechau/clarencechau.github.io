@@ -87,7 +87,7 @@ function About() {
 
             <h4>Experience</h4>
             <p>
-              Over my lasts couple ysears of studying, I have had the
+              Over my lasts couple years of studying, I have had the
               opportunity to work as a software engineer at Aireum and Moneris.
               Both these organizations have given me valuable experiences in
               full-stack development, allowing me to work and grow my skillset
