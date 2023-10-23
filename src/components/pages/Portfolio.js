@@ -42,7 +42,6 @@ function Portfolio() {
       category: "Python",
       img: "../images/tech/toronto.jpg",
       link: "https://github.com/clarencechau/picture-manipulation",
-
     },
   ];
   const [isMobile, setIsMobile] = useState(false);
@@ -66,6 +65,10 @@ function Portfolio() {
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.3;
+    }
+    const videoElement = document.getElementById("bgvid");
+    if (videoElement) {
+      videoElement.play();
     }
   }, []);
 
@@ -100,7 +103,8 @@ function Portfolio() {
         autoPlay
         loop
         muted
-        style={{ position: "absolute" }}
+        playsInline
+        style={{ position: "absolute", zIndex: "-1" }}
       />
       <div className="darken-video" />
       <div className="project-list-container">

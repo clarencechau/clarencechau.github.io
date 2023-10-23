@@ -29,6 +29,10 @@ const Home = () => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.3;
     }
+    const videoElement = document.getElementById("bgvid");
+    if (videoElement) {
+      videoElement.play();
+    }
   }, []);
 
   return (
@@ -45,7 +49,8 @@ const Home = () => {
         autoPlay
         loop
         muted
-        style={{ position: "absolute" }}
+        playsInline
+        style={{ position: "absolute", zIndex: "-1" }}
       />
       <div className="darken-video" />
       <Navbar />
