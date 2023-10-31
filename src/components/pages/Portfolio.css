@@ -97,7 +97,7 @@ hr {
   /* margin: 20px 0; Vertical spacing */
 }
 
-@media (max-width: 1170px) {
+@media (max-width: 1235px) {
   .hover-image {
     padding-top: 275px;
     height: 400px;
@@ -174,3 +174,27 @@ hr {
   }
 }
 
+@media (max-height: 875px) {
+  .hover-image {
+    padding-top: 200px;
+  }
+}
+
+@media (max-height: 860px) {
+  .hover-image {
+    padding-top: 170px;
+  }
+}
+
+@media (max-height: 770px) {
+  .hover-image {
+    padding-top: 140px;
+  }
+}
+
+@media (max-height: 710px) {
+  .hover-image {
+    width: 400px;
+    height: 400px;
+  }
+}
