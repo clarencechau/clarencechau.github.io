@@ -172,7 +172,7 @@ function About() {
               <li>Ranked 2nd in Canada for U17 boys doubles</li>
               <li>Ranked 4th in Canada for U17 boys singles</li>
               <li>U17 boys doubles Ontario provincial champion</li>
-              <li>Currently ranked 3rd in Canada for U23 boys doubles</li>
+              <li>Currently ranked 2nd in Canada for U23 boys doubles</li>
             </ul>
             <p>
               These accomplishments were forged through countless hours in the
