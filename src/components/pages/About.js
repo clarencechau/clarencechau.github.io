@@ -76,7 +76,7 @@ function About() {
               But there's more to me than just academics and coding. On the
               athletic side, I'm a nationally-ranked badminton player. I've had
               the privilege of representing Canada on the junior national team
-              and currently hold the third-place ranking in the country for
+              and currently hold the second-place ranking in the country for
               Under-23 Men's Doubles.
             </p>
             <p>
@@ -87,11 +87,11 @@ function About() {
 
             <h4>Experience</h4>
             <p>
-              Over my lasts couple years of studying, I have had the
-              opportunity to work as a software engineer at Aireum and Moneris.
-              Both these organizations have given me valuable experiences in
-              full-stack development, allowing me to work and grow my skillset
-              while working with different team dynamics.
+              Over my lasts couple years of studying, I have had the opportunity
+              to work as a software engineer at Aireum and Moneris. Both these
+              organizations have given me valuable experiences in full-stack
+              development, allowing me to work and grow my skillset while
+              working with different team dynamics.
             </p>
             <p>
               I can say that after working at my previous occupations, my adept
@@ -168,11 +168,11 @@ function About() {
               like to share:
             </p>
             <ul>
+              <li>Currently ranked 2nd in Canada for U23 boys doubles</li>
               <li>Former member of the Canadian junior national team</li>
               <li>Ranked 2nd in Canada for U17 boys doubles</li>
               <li>Ranked 4th in Canada for U17 boys singles</li>
               <li>U17 boys doubles Ontario provincial champion</li>
-              <li>Currently ranked 2nd in Canada for U23 boys doubles</li>
             </ul>
             <p>
               These accomplishments were forged through countless hours in the
