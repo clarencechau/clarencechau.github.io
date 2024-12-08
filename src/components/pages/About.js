@@ -76,7 +76,7 @@ function About() {
               But there's more to me than just academics and coding. On the
               athletic side, I'm a nationally-ranked badminton player. I've had
               the privilege of representing Canada on the junior national team
-              and currently hold the second-place ranking in the country for Men's Doubles.
+              and currently hold the first-place ranking in the country for Men's Doubles.
             </p>
             <p>
               Both my academic and athletic experiences have armed me with
@@ -167,7 +167,7 @@ function About() {
               like to share:
             </p>
             <ul>
-              <li>Currently Ranked #2 in Canada for Men's Doubles</li>
+              <li>Currently Ranked #1 in Canada for Men's Doubles</li>
               <li>2024 Atlantic Senior Open Nationals Champion</li>
               <li>Former Member of the Canadian Junior National Team</li>
               <li>Ranked #2 in Canada for U17 Boys Doubles</li>

@@ -1,5 +1,6 @@
 .portfolio {
   font-family: "inter", sans-serif;
+  overflow: hidden;
 }
 
 .back-button-container {
@@ -10,226 +11,65 @@
   z-index: 500;
 }
 
-.back-text-portfolio {
-  padding-top: 10px;
-  font-family: "inter", sans-serif;
-  text-decoration: none;
-  color: white;
-  font-family: "inter", sans-serif;
-  font-weight: 400;
-  font-size: 1.3rem;
-}
-
-.back-icon-portfolio {
-  padding-left: 15px;
-  padding-top: 10px;
-  color: white;
-}
-
-.project-list-container {
+.portfolio-container {
   display: flex;
-  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.projects-container {
+  flex: 2;
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.projects-container::-webkit-scrollbar {
+  display: none; /* hide scroll bar (chrome, safari) */
+}
+
+.projects {
+  padding: 5px;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.cards-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.profile-container {
+  flex: 1;
+  background: white;
+  position: sticky;
+  height: 100%;
+}
+
+.profile {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
   height: 100vh;
 }
 
-.project-title {
-  padding-right: 345px;
-  color: white;
-  font-size: 30px;
-  padding-bottom: 10px;
+.headshot-square {
+  height: 140px;
+  width: 140px;
+  border-radius: 10px;
+  left: 0;
 }
 
-.project-list {
-  flex: 0.5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  padding-left: 100px;
-}
+.profile {
 
-.project-item {
-  cursor: pointer;
-  color: white;
-}
-
-.project-item:hover {
-  font-weight: 800;
-}
-
-.project-image {
-  flex: 0.5;
-  padding: 50px;
-}
-
-.project-item-text {
-  text-align: right;
-  padding-bottom: 25px;
-  padding-top: 15px;
-}
-
-.project-item-text {
-  display: flex;
-  justify-content: space-between;
-}
-
-.experience-title {
-  padding-top: 20px;
-  padding-right: 323px;
-  color: white;
-  font-size: 30px;
-  padding-bottom: 10px;
-}
-
-.subtext-name {
-  text-align: left;
-}
-.subtext-skill {
-  text-align: right;
-  font-size: 13px;
-  padding-top: 5px;
-}
-
-.hover-image {
-  padding-left: 50px;
-  padding-top: 220px;
-  position: absolute;
-  height: 500px;
-  width: 500px;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0.5x;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid white;
-  width: 500px; /* Adjust width as required */
-  /* margin: 20px 0; Vertical spacing */
-}
-
-@media (max-width: 1235px) {
-  .hover-image {
-    padding-top: 275px;
-    height: 400px;
-    width: 400px;
-  }
-}
-
-@media (max-width: 1080px) {
-  .hover-image {
-    padding-top: 325px;
-    height: 300px;
-    width: 300px;
-  }
-}
-
-@media (max-width: 960px) {
-  .project-list {
-    padding-left: 150px;
-  }
-}
-
-@media (max-width: 780px) {
-  .project-list {
-    padding-left: 100px;
-  }
-}
-
-@media (max-width: 660px) {
-  .project-list {
-    padding-left: 70px;
-  }
-}
-
-@media (max-width: 600px) {
-  .project-list {
-    padding-left: 40px;
-  }
-}
-
-@media (max-width: 550px) {
-  .project-title {
-    padding-right: 250px;
-  }
-
-  .experience-title {
-    padding-right: 220px;
-  }
-
-  hr {
-    width: 400px;
-  }
-}
-
-@media (max-width: 465px) {
-  .project-list {
-    padding-left: 50px;
-    padding-top: 50px;
-  }
-  .project-title {
-    padding-right: 195px;
-  }
-
-  .experience-title {
-    padding-right: 170px;
-  }
-
-  hr {
-    width: 350px;
-  }
-}
-
-@media (max-width: 430px) {
-  .project-list {
-    padding-left: 35px;
-    padding-top: 50px;
-  }
-}
-
-@media (max-width: 400px) {
-  hr {
-    width: 300px;
-  }
-
-  .project-title {
-    padding-right: 145px;
-  }
-
-  .experience-title {
-    padding-right: 120px;
-  }
-}
-
-@media (max-height: 875px) {
-  .hover-image {
-    padding-top: 200px;
-  }
-}
-
-@media (max-height: 860px) {
-  .hover-image {
-    padding-top: 170px;
-  }
-}
-
-@media (max-height: 770px) {
-  .hover-image {
-    padding-top: 140px;
-  }
-}
-
-@media (max-height: 710px) {
-  .hover-image {
-    width: 400px;
-    height: 400px;
-  }
-}
-
-@media (max-width: 450px) and (max-height: 800px) {
-  .project-list {
-    padding-top: 0px;
-  }
 }
