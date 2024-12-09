@@ -1,1 +1,6 @@
-.env
+# node modules
+node_modules/
+
+#eslint
+.eslintcache
+*.pack
