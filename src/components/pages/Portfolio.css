@@ -11,6 +11,12 @@
   z-index: 500;
 }
 
+.portfolio-tag {
+  color: #afbfd6;
+  line-height: "4";
+  margin-bottom: 80px;
+}
+
 .portfolio-container {
   display: flex;
   height: 100vh;
@@ -36,8 +42,10 @@
 .title {
   text-align: center;
   color: white;
-  font-size: 30px;
+  font-size: 40px;
   padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .cards-section {
@@ -47,6 +55,15 @@
   height: 100%;
   padding: 8px;
   box-sizing: border-box;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.video-stats {
+  display: flex;
+  justify-content: space-between;
 }
 
 .profile-container {
@@ -59,17 +76,76 @@
 .profile {
   display: flex;
   justify-content: center; 
-  align-items: center;
-  height: 100vh;
+  height: 100vh; 
+  flex-direction: column;
+  margin-left: 30px;
+  padding: 20px;
 }
 
 .headshot-square {
-  height: 140px;
-  width: 140px;
+  height: 180px;
+  width: 180px;
   border-radius: 10px;
-  left: 0;
 }
 
-.profile {
+.github-name {
+  color: black;
+  font-size: x-large;
+  padding-top: 25px;
+}
 
+.github-link {
+  padding-top: 5px;
+  font-size: larger;
+  color: black;
+  text-decoration: none;
+}
+
+.website-link {
+  text-decoration: none;
+  color: black;
+  margin-top: 45px;
+  display: flex;
+}
+
+.link-name {
+  padding-left: 5px;
+  padding-top: 1.5px;
+}
+
+.current-place {
+  display: flex;
+  padding-top: 5px;
+}
+
+.place-name {
+  padding-top: 2px;
+  padding-left: 5px;
+}
+
+.current-work {
+  display: flex;
+  padding-top: 5px;
+}
+
+.work-name {
+  padding-top: 3px;
+  padding-left: 5px;
+}
+
+.icons-section {
+  padding-top: 20px;
+}
+
+.social-icon-link-black {
+  font-size: 25px;
+  padding-bottom: 40px;
+  z-index: 999;
+  padding-right: 30px;
+  color: black;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon-link-black:hover {
+  transform: scale(1.1);
 }
