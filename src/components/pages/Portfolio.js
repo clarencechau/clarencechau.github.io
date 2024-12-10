@@ -106,7 +106,6 @@ function Portfolio() {
   ];
 
   const [isMobile, setIsMobile] = useState(false);
-  const [activeHover, setActiveHover] = useState(projects[0]);
 
   const getYouTubeVideoId = (url) => {
     try {
@@ -173,6 +172,86 @@ function Portfolio() {
         style={{ position: "absolute", zIndex: "-1" }}
       />
       <div className="darken-video" />
+      {isMobile && (
+        <div className="profile-container">
+          <div className="profile">
+            <div className="portfolio-tag">
+              &lt; &nbsp; portfolio &nbsp;/ &nbsp;&gt;
+            </div>
+
+            <img
+              className="headshot-square"
+              src="../images/headshot.jpg"
+              alt=""
+            />
+            <div className="github-name">Clarence Chau</div>
+            <a
+              href="https://github.com/clarencechau"
+              target="_blank"
+              className="github-link"
+            >
+              @clarencechau
+            </a>
+            <a
+              href="https://www.clarencechau.com"
+              target="_blank"
+              className="website-link"
+            >
+              <Link className="link-icon" />
+              <div className="link-name">https://clarencechau.com</div>
+            </a>
+            <div className="current-place">
+              <Place className="place-icon" />
+              <div className="place-name">Toronto</div>
+            </div>
+            <div className="current-work">
+              <Work className="work-icon" />
+              <div className="work-name">
+                Incoming Data Engineer @ Scotiabank
+              </div>
+            </div>
+
+            <div className="icons-section">
+              <a
+                className="social-icon-link-black linkedin"
+                href="https://ca.linkedin.com/in/clarence-chau-3a827b1b7"
+                target="_blank"
+                aria-label="LinkedIn"
+                rel="noreferrer noopener"
+              >
+                <i className="fab fa-linkedin"></i>
+              </a>
+              <a
+                className="social-icon-link-black github"
+                href="https://github.com/clarencechau"
+                target="_blank"
+                aria-label="GitHub"
+                rel="noreferrer noopener"
+              >
+                <i className="fab fa-github"></i>
+              </a>
+              <a
+                className="social-icon-link-black youtube"
+                href="https://www.youtube.com/@clarencechauu"
+                target="_blank"
+                aria-label="Youtube"
+                rel="noreferrer noopener"
+              >
+                <i className="fab fa-youtube"></i>
+              </a>
+              <a
+                className="social-icon-link-black instagram"
+                href="https://www.instagram.com/clarencechauu/"
+                target="_blank"
+                aria-label="Instagram"
+                rel="noreferrer noopener"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="portfolio-container">
         <div className="projects-container">
           <div className="projects">
@@ -254,7 +333,7 @@ function Portfolio() {
                               />
                             </Typography>
                             <Typography sx={{ color: "grey", display: "flex" }}>
-                              <ThumbUp sx={{ marginTop: 2, paddingRight: 1}} />
+                              <ThumbUp sx={{ marginTop: 2, paddingRight: 1 }} />
                               <VideoLikes
                                 videoId={getYouTubeVideoId(video.link)}
                               />
@@ -271,84 +350,86 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="profile-container">
-          <div className="profile">
-            <div className="portfolio-tag">
-              &lt; &nbsp; portfolio &nbsp;/ &nbsp;&gt;
-            </div>
-
-            <img
-              className="headshot-square"
-              src="../images/headshot.jpg"
-              alt=""
-            />
-            <div className="github-name">Clarence Chau</div>
-            <a
-              href="https://github.com/clarencechau"
-              target="_blank"
-              className="github-link"
-            >
-              @clarencechau
-            </a>
-            <a
-              href="https://www.clarencechau.com"
-              target="_blank"
-              className="website-link"
-            >
-              <Link className="link-icon" />
-              <div className="link-name">https://clarencechau.com</div>
-            </a>
-            <div className="current-place">
-              <Place className="place-icon" />
-              <div className="place-name">Toronto</div>
-            </div>
-            <div className="current-work">
-              <Work className="work-icon" />
-              <div className="work-name">
-                Incoming Data Engineer @ Scotiabank
+        {!isMobile && (
+          <div className="profile-container">
+            <div className="profile">
+              <div className="portfolio-tag">
+                &lt; &nbsp; portfolio &nbsp;/ &nbsp;&gt;
               </div>
-            </div>
 
-            <div className="icons-section">
+              <img
+                className="headshot-square"
+                src="../images/headshot.jpg"
+                alt=""
+              />
+              <div className="github-name">Clarence Chau</div>
               <a
-                className="social-icon-link-black linkedin"
-                href="https://ca.linkedin.com/in/clarence-chau-3a827b1b7"
-                target="_blank"
-                aria-label="LinkedIn"
-                rel="noreferrer noopener"
-              >
-                <i className="fab fa-linkedin"></i>
-              </a>
-              <a
-                className="social-icon-link-black github"
                 href="https://github.com/clarencechau"
                 target="_blank"
-                aria-label="GitHub"
-                rel="noreferrer noopener"
+                className="github-link"
               >
-                <i className="fab fa-github"></i>
+                @clarencechau
               </a>
               <a
-                className="social-icon-link-black youtube"
-                href="https://www.youtube.com/@clarencechauu"
+                href="https://www.clarencechau.com"
                 target="_blank"
-                aria-label="Youtube"
-                rel="noreferrer noopener"
+                className="website-link"
               >
-                <i className="fab fa-youtube"></i>
+                <Link className="link-icon" />
+                <div className="link-name">https://clarencechau.com</div>
               </a>
-              <a
-                className="social-icon-link-black instagram"
-                href="https://www.instagram.com/clarencechauu/"
-                target="_blank"
-                aria-label="Instagram"
-                rel="noreferrer noopener"
-              >
-                <i className="fab fa-instagram"></i>
-              </a>
+              <div className="current-place">
+                <Place className="place-icon" />
+                <div className="place-name">Toronto</div>
+              </div>
+              <div className="current-work">
+                <Work className="work-icon" />
+                <div className="work-name">
+                  Incoming Data Engineer @ Scotiabank
+                </div>
+              </div>
+
+              <div className="icons-section">
+                <a
+                  className="social-icon-link-black linkedin"
+                  href="https://ca.linkedin.com/in/clarence-chau-3a827b1b7"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                  rel="noreferrer noopener"
+                >
+                  <i className="fab fa-linkedin"></i>
+                </a>
+                <a
+                  className="social-icon-link-black github"
+                  href="https://github.com/clarencechau"
+                  target="_blank"
+                  aria-label="GitHub"
+                  rel="noreferrer noopener"
+                >
+                  <i className="fab fa-github"></i>
+                </a>
+                <a
+                  className="social-icon-link-black youtube"
+                  href="https://www.youtube.com/@clarencechauu"
+                  target="_blank"
+                  aria-label="Youtube"
+                  rel="noreferrer noopener"
+                >
+                  <i className="fab fa-youtube"></i>
+                </a>
+                <a
+                  className="social-icon-link-black instagram"
+                  href="https://www.instagram.com/clarencechauu/"
+                  target="_blank"
+                  aria-label="Instagram"
+                  rel="noreferrer noopener"
+                >
+                  <i className="fab fa-instagram"></i>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </motion.div>
   );
