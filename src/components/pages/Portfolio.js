@@ -186,12 +186,14 @@ function Portfolio() {
                     className="headshot-square"
                     src="../images/headshot.jpg"
                     alt=""
+                    rel="noreferrer noopener"
                   />
                   <div className="github-name">Clarence Chau</div>
                   <a
                     href="https://github.com/clarencechau"
                     target="_blank"
                     className="github-link"
+                    rel="noreferrer noopener"
                   >
                     @clarencechau
                   </a>
@@ -199,6 +201,7 @@ function Portfolio() {
                     href="https://www.clarencechau.com"
                     target="_blank"
                     className="website-link"
+                    rel="noreferrer noopener"
                   >
                     <Link className="link-icon" />
                     <div className="link-name">https://clarencechau.com</div>
@@ -381,6 +384,7 @@ function Portfolio() {
                 href="https://github.com/clarencechau"
                 target="_blank"
                 className="github-link"
+                rel="noreferrer noopener"
               >
                 @clarencechau
               </a>
@@ -388,6 +392,7 @@ function Portfolio() {
                 href="https://www.clarencechau.com"
                 target="_blank"
                 className="website-link"
+                rel="noreferrer noopener"
               >
                 <Link className="link-icon" />
                 <div className="link-name">https://clarencechau.com</div>
