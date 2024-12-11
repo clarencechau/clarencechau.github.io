@@ -20,17 +20,13 @@ const VideoLikes = ({ videoId }) => {
     fetchLikes();
   }, [videoId]);
 
+  const formatLikes = (num) => {
+    return new Intl.NumberFormat("en-US").format(num);
+  };
+
   return (
     <div>
-      <p>
-        {likes ? (
-          <>
-            {likes}
-          </>
-        ) : (
-          "Loading..."
-        )}
-      </p>
+      <p>{likes ? <>{formatLikes(likes)}</> : "Loading..."}</p>
     </div>
   );
 };

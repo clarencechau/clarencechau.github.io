@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const VideoViews = ({ videoId }) => {
   const [views, setViews] = useState(null);
-  
+
   const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY;
 
   useEffect(() => {
@@ -18,9 +18,13 @@ const VideoViews = ({ videoId }) => {
     fetchViews();
   }, [videoId]);
 
+  const formatViews = (num) => {
+    return new Intl.NumberFormat("en-US").format(num);
+  };
+
   return (
     <div>
-      <p>{views ? views + " views": "Loading..."}</p>
+      <p>{views ? formatViews(views) + " views" : "Loading..."}</p>
     </div>
   );
 };
