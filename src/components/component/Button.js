@@ -13,6 +13,7 @@ function MyButton({ children, onClick, link, target, newWindow, className }) {
       target={target}
       className="btn-mobile"
       rel="noopener noreferrer"
+      style={{ textDecoration: "none"}}
     >
       <button
         className={className}

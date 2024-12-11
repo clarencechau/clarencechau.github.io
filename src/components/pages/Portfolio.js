@@ -16,6 +16,7 @@ import Work from "@mui/icons-material/Work";
 import ThumbUp from "@mui/icons-material/ThumbUp";
 import VideoViews from "../../api/VideoViews";
 import VideoLikes from "../../api/VideoLikes";
+import KeyboardDoubleArrowDown from "@mui/icons-material/KeyboardDoubleArrowDown";
 
 function Portfolio() {
   const projects = [
@@ -66,7 +67,7 @@ function Portfolio() {
       name: "Data Engineer",
       category: "Python, SQL, Spark, MinIO, Cloud",
       img: "../images/tech/scotiabank.png",
-      link: "http://www.aireum.ca/",
+      link: "https://www.scotiabank.com/ca/en/personal.html",
       description:
         "Incoming data engineer intern on the Canadian Banking team, focusing on customer insight and data analytics.",
     },
@@ -79,7 +80,7 @@ function Portfolio() {
         "Collaborated with a cross-functional team to architect and rebuild a merchant chargebacks application, improving efficiency, user experience, and code modernity.",
     },
     {
-      name: "Full Stack Developer",
+      name: "Software Engineer",
       category: "React, Javascript, Firebase",
       img: "../images/tech/aireum2.png",
       link: "http://www.aireum.ca/",
@@ -153,15 +154,6 @@ function Portfolio() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="back-button-container">
-        <MyButton className="back-button" link="/">
-          <div className="back-text-portfolio">BACK</div>
-          <div className="back-icon-portfolio">
-            <FontAwesomeIcon icon={faArrowTrendUp} />
-          </div>
-        </MyButton>
-      </div>
-
       <video
         src="/videos/backgroundvideo2.mp4"
         ref={videoRef}
@@ -172,89 +164,103 @@ function Portfolio() {
         style={{ position: "absolute", zIndex: "-1" }}
       />
       <div className="darken-video" />
-      {isMobile && (
-        <div className="profile-container">
-          <div className="profile">
-            <div className="portfolio-tag">
-              &lt; &nbsp; portfolio &nbsp;/ &nbsp;&gt;
-            </div>
 
-            <img
-              className="headshot-square"
-              src="../images/headshot.jpg"
-              alt=""
-            />
-            <div className="github-name">Clarence Chau</div>
-            <a
-              href="https://github.com/clarencechau"
-              target="_blank"
-              className="github-link"
-            >
-              @clarencechau
-            </a>
-            <a
-              href="https://www.clarencechau.com"
-              target="_blank"
-              className="website-link"
-            >
-              <Link className="link-icon" />
-              <div className="link-name">https://clarencechau.com</div>
-            </a>
-            <div className="current-place">
-              <Place className="place-icon" />
-              <div className="place-name">Toronto</div>
-            </div>
-            <div className="current-work">
-              <Work className="work-icon" />
-              <div className="work-name">
-                Incoming Data Engineer @ Scotiabank
-              </div>
-            </div>
-
-            <div className="icons-section">
-              <a
-                className="social-icon-link-black linkedin"
-                href="https://ca.linkedin.com/in/clarence-chau-3a827b1b7"
-                target="_blank"
-                aria-label="LinkedIn"
-                rel="noreferrer noopener"
-              >
-                <i className="fab fa-linkedin"></i>
-              </a>
-              <a
-                className="social-icon-link-black github"
-                href="https://github.com/clarencechau"
-                target="_blank"
-                aria-label="GitHub"
-                rel="noreferrer noopener"
-              >
-                <i className="fab fa-github"></i>
-              </a>
-              <a
-                className="social-icon-link-black youtube"
-                href="https://www.youtube.com/@clarencechauu"
-                target="_blank"
-                aria-label="Youtube"
-                rel="noreferrer noopener"
-              >
-                <i className="fab fa-youtube"></i>
-              </a>
-              <a
-                className="social-icon-link-black instagram"
-                href="https://www.instagram.com/clarencechauu/"
-                target="_blank"
-                aria-label="Instagram"
-                rel="noreferrer noopener"
-              >
-                <i className="fab fa-instagram"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
       <div className="portfolio-container">
         <div className="projects-container">
           <div className="projects">
+            {isMobile && (
+              <div className="profile-container-mobile">
+                <div className="back-button-container-port">
+                  <MyButton className="back-button-port" link="/">
+                    <div className="back-text-port">Back</div>
+                    <div className="back-icon-port">
+                      <FontAwesomeIcon icon={faArrowTrendUp} />
+                    </div>
+                  </MyButton>
+                </div>
+                <div className="portfolio-tag-mobile">
+                  &lt; &nbsp; portfolio &nbsp;/ &nbsp;&gt;
+                </div>
+                <div className="profile-mobile">
+                  <img
+                    className="headshot-square"
+                    src="../images/headshot.jpg"
+                    alt=""
+                  />
+                  <div className="github-name">Clarence Chau</div>
+                  <a
+                    href="https://github.com/clarencechau"
+                    target="_blank"
+                    className="github-link"
+                  >
+                    @clarencechau
+                  </a>
+                  <a
+                    href="https://www.clarencechau.com"
+                    target="_blank"
+                    className="website-link"
+                  >
+                    <Link className="link-icon" />
+                    <div className="link-name">https://clarencechau.com</div>
+                  </a>
+                  <div className="current-place">
+                    <Place className="place-icon" />
+                    <div className="place-name">Toronto</div>
+                  </div>
+                  <div className="current-work">
+                    <Work className="work-icon" />
+                    <div className="work-name">
+                      Incoming Data Engineer @ Scotiabank
+                    </div>
+                  </div>
+
+                  <div className="icons-section">
+                    <a
+                      className="social-icon-link-black linkedin"
+                      href="https://ca.linkedin.com/in/clarence-chau-3a827b1b7"
+                      target="_blank"
+                      aria-label="LinkedIn"
+                      rel="noreferrer noopener"
+                    >
+                      <i className="fab fa-linkedin"></i>
+                    </a>
+                    <a
+                      className="social-icon-link-black github"
+                      href="https://github.com/clarencechau"
+                      target="_blank"
+                      aria-label="GitHub"
+                      rel="noreferrer noopener"
+                    >
+                      <i className="fab fa-github"></i>
+                    </a>
+                    <a
+                      className="social-icon-link-black youtube"
+                      href="https://www.youtube.com/@clarencechauu"
+                      target="_blank"
+                      aria-label="Youtube"
+                      rel="noreferrer noopener"
+                    >
+                      <i className="fab fa-youtube"></i>
+                    </a>
+                    <a
+                      className="social-icon-link-black instagram"
+                      href="https://www.instagram.com/clarencechauu/"
+                      target="_blank"
+                      aria-label="Instagram"
+                      rel="noreferrer noopener"
+                    >
+                      <i className="fab fa-instagram"></i>
+                    </a>
+                  </div>
+                  <div className="scroll-container">
+                    <div className="scroll">
+                      <KeyboardDoubleArrowDown />
+                      <div className="arrow-text">Scroll for more</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
             <h2 className="title">Experience</h2>
 
             <div className="cards-section">
@@ -353,6 +359,14 @@ function Portfolio() {
         {!isMobile && (
           <div className="profile-container">
             <div className="profile">
+              <div className="back-button-container-port">
+                <MyButton className="back-button-port" link="/">
+                  <div className="back-text-port">Back</div>
+                  <div className="back-icon-port">
+                    <FontAwesomeIcon icon={faArrowTrendUp} />
+                  </div>
+                </MyButton>
+              </div>
               <div className="portfolio-tag">
                 &lt; &nbsp; portfolio &nbsp;/ &nbsp;&gt;
               </div>

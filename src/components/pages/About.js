@@ -31,10 +31,10 @@ function About() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="back-button-container">
-        <MyButton className="back-button" link="/">
-          <div className="back-text">Back</div>
-          <div className="back-icon">
+      <div className="back-button-container-about">
+        <MyButton className="back-button-about" link="/">
+          <div className="back-text-about">Back</div>
+          <div className="back-icon-about">
             <FontAwesomeIcon icon={faArrowTrendUp} />
           </div>
         </MyButton>
@@ -168,11 +168,13 @@ function About() {
             </p>
             <ul>
               <li>Currently Ranked #1 in Canada for Men's Doubles</li>
-              <li>2024 Atlantic Senior Open Nationals Champion</li>
+              <li>2024 Quebec Senior Open National Champion</li>
+              <li>2024 Atlantic Senior Open National Champion</li>
+              <li>2023 Ranked #2 in Canada for U23 Boys Doubles</li>
+              <li>2018 Ranked #2 in Canada for U17 Boys Doubles</li>
+              <li>2018 Ranked #4 in Canada for U17 Boys Singles</li>
+              <li>2018 U17 Boys Doubles Ontario Provincial Champion</li>
               <li>Former Member of the Canadian Junior National Team</li>
-              <li>Ranked #2 in Canada for U17 Boys Doubles</li>
-              <li>Ranked #4 in Canada for U17 Boys Singles</li>
-              <li>U17 Boys Doubles Ontario Provincial Champion</li>
             </ul>
             <p>
               These accomplishments were forged through countless hours in the

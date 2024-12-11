@@ -35,6 +35,7 @@
   margin-left: 4px;
   word-spacing: 2px;
   padding: 12px 35px;
+  text-decoration: none;
 }
 
 .contact-button {
@@ -64,6 +65,7 @@
   padding-top: 30px;
   padding-right: 35px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .connect-button {

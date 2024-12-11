@@ -3,29 +3,41 @@
   overflow-y: auto;
 }
 
-.back-button {
+.back-button-container-about {
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: flex;
+}
+
+.back-button-about {
   right: 0;
   top: 0;
   display: flex;
   position: fixed;
   transition: transform 0.15s ease-in-out;
+  background-color: transparent;
+  color: black;
+  border: none;
+  font-size: 1.4rem;
+  padding-top: 30px;
+  padding-right: 35px;
+  cursor: pointer;
 }
 
-.back-button:hover {
+.back-button-about:hover {
   transform: scale(1.05);
 }
 
-.back-text {
+.back-text-about {
   padding-top: 10px;
+  font-family: "inter", sans-serif;
   text-decoration: none;
 }
 
-.back-icon {
+.back-icon-about {
   padding-left: 15px;
   padding-top: 10px;
-}
-
-.about-container {
 }
 
 .about-tag {
@@ -193,7 +205,7 @@ h3 {
     width: 88%;
   }
 
-  .back-button {
+  .back-button-about {
     position: absolute;
     text-decoration: none;
   }
