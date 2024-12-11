@@ -26,7 +26,7 @@ function Portfolio() {
       img: "../images/badminton-image.jpg",
       link: "#",
       description:
-        "Developing a website that makes life easier for players and tournament hosts to create and advertise local tournaments.",
+        "Developing a website that simplifies the process for players and hosts to create and advertise local badminton tournaments.",
     },
     {
       name: "Gungeon",
