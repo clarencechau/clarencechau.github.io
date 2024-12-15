@@ -104,6 +104,13 @@ function Portfolio() {
       description:
         "After obtaining my first national title, I flew to Quebec City to try and win my second back-to-back men's doubles national gold.",
     },
+    {
+      name: "I Played Against World No. 72",
+      img: "../images/tech/youtube3.webp",
+      link: "https://youtu.be/3_CKKj2MgFM",
+      description:
+        "The Canadian International Challenge was hosted in my home city, and I got a change to play against a world class pair.",
+    },
   ];
 
   const [isMobile, setIsMobile] = useState(false);
