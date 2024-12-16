@@ -27,6 +27,7 @@ const VideoViews = ({ videoId }) => {
       <p>{views ? formatViews(views) + " views" : "Loading..."}</p>
     </div>
   );
+  
 };
 
 export default VideoViews;
