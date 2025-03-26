@@ -64,12 +64,19 @@ function Portfolio() {
 
   const experience = [
     {
+      name: "Incoming Software Engineer",
+      category: "Ruby on Rails, React, GraphQL, MySQL, Docker, Kubernetes",
+      img: "../images/tech/shopify.jpg",
+      link: "https://www.scotiabank.com/ca/en/personal.html",
+      description: "Incoming Software Engineer in Summer 2025"
+    },
+    {
       name: "Data Engineer",
-      category: "Python, SQL, Spark, MinIO, Cloud",
+      category: "Pandas, MySQL, Spark, Airflow, Rancher, MinIO, Docker, Power BI",
       img: "../images/tech/scotiabank.png",
       link: "https://www.scotiabank.com/ca/en/personal.html",
       description:
-        "Incoming data engineer intern on the Canadian Banking team, focusing on customer insight and data analytics.",
+        "Optomized data on multiple projects under the CID&A Canadian Banking Platforms team, focusing on the migratino of enterprise data lake platforms and pipeline testing.",
     },
     {
       name: "Software Engineer",
@@ -220,7 +227,7 @@ function Portfolio() {
                   <div className="current-work">
                     <Work className="work-icon" />
                     <div className="work-name">
-                      Incoming Data Engineer @ Scotiabank
+                      Data Engineer @ Scotiabank
                     </div>
                   </div>
 
@@ -286,7 +293,7 @@ function Portfolio() {
                           alt={experience.name}
                           sx={{ scale: 1.01 }}
                         />
-                        <CardContent sx={{ minHeight: 225 }} className="card">
+                        <CardContent sx={{ minHeight: 250 }} className="card">
                           <h2 className="card-header">{experience.name}</h2>
                           <Typography sx={{ color: "grey" }}>
                             {experience.category}
@@ -308,7 +315,7 @@ function Portfolio() {
                       <CardActionArea href={project.link} target="_blank">
                         <CardMedia
                           component="img"
-                          height="200"
+                          height="250"
                           image={project.img}
                           alt={project.name}
                         />
@@ -411,7 +418,7 @@ function Portfolio() {
               <div className="current-work">
                 <Work className="work-icon" />
                 <div className="work-name">
-                  Incoming Data Engineer @ Scotiabank
+                  Data Engineer @ Scotiabank
                 </div>
               </div>
 
