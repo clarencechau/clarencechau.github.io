@@ -67,7 +67,7 @@ function Portfolio() {
       name: "Incoming Software Engineer",
       category: "Ruby on Rails, React, GraphQL, MySQL, Docker, Kubernetes",
       img: "../images/tech/shopify.jpg",
-      link: "https://www.scotiabank.com/ca/en/personal.html",
+      link: "https://www.shopify.com/ca",
       description: "Incoming Software Engineer in Summer 2025"
     },
     {
