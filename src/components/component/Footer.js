@@ -36,7 +36,7 @@ const Footer = () => {
           <img className="headshot" src="../images/headshot.jpg" alt="" />
           <div className="footer-text">
             Clarence Chau <br />
-            Software Developer
+            Software Engineer
           </div>
           <ul className="skills-text">
             <li className="skills">UX</li>

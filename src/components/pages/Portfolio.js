@@ -64,19 +64,19 @@ function Portfolio() {
 
   const experience = [
     {
-      name: "Incoming Software Engineer",
-      category: "Ruby on Rails, React, GraphQL, MySQL, Docker, Kubernetes",
+      name: "Software Engineer",
+      category: "React Native, Typescript",
       img: "../images/tech/shopify.jpg",
       link: "https://www.shopify.com/ca",
-      description: "Incoming Software Engineer in Summer 2025"
+      description: "Working on the Shopify POS Design System",
     },
     {
       name: "Data Engineer",
-      category: "Pandas, MySQL, Spark, Airflow, Rancher, MinIO, Docker, Power BI",
+      category: "Pandas, MySQL, Spark, Airflow, Rancher, MinIO, Docker",
       img: "../images/tech/scotiabank.png",
       link: "https://www.scotiabank.com/ca/en/personal.html",
       description:
-        "Optomized data on multiple projects under the CID&A Canadian Banking Platforms team, focusing on the migratino of enterprise data lake platforms and pipeline testing.",
+        "Optomized data on multiple projects under the CID&A Canadian Banking Platforms team, focusing on the migration of enterprise data lake platforms and pipeline testing.",
     },
     {
       name: "Software Engineer",
@@ -226,9 +226,7 @@ function Portfolio() {
                   </div>
                   <div className="current-work">
                     <Work className="work-icon" />
-                    <div className="work-name">
-                      Data Engineer @ Scotiabank
-                    </div>
+                    <div className="work-name">Software Engineer @ Shopify</div>
                   </div>
 
                   <div className="icons-section">
@@ -417,9 +415,7 @@ function Portfolio() {
               </div>
               <div className="current-work">
                 <Work className="work-icon" />
-                <div className="work-name">
-                  Data Engineer @ Scotiabank
-                </div>
+                <div className="work-name">Software Engineer @ Shopify</div>
               </div>
 
               <div className="icons-section">
