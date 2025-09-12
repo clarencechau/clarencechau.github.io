@@ -343,7 +343,7 @@ function Portfolio() {
               <Grid2 container spacing={2} justifyContent="center">
                 {videos.map((video, index) => (
                   <Grid2 item xs={6} key={index}>
-                    <Card sx={{ maxWidth: 400 }}>
+                    <Card sx={{ maxWidth: 360 }}>
                       <CardActionArea href={video.link} target="_blank">
                         <CardMedia
                           component="img"
@@ -352,7 +352,7 @@ function Portfolio() {
                           alt={video.name}
                         />
 
-                        <CardContent sx={{ minHeight: 100 }}>
+                        <CardContent sx={{ minHeight: 250 }}>
                           <h4 className="card-header"> {video.name}</h4>
                           <div className="video-stats">
                             <Typography sx={{ color: "grey" }}>
