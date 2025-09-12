@@ -167,13 +167,10 @@ function About() {
               like to share:
             </p>
             <ul>
-              <li>Currently Ranked #1 in Canada for Men's Doubles</li>
-              <li>2024 Quebec Senior Open National Champion</li>
-              <li>2024 Atlantic Senior Open National Champion</li>
-              <li>2023 Ranked #2 in Canada for U23 Boys Doubles</li>
-              <li>2018 Ranked #2 in Canada for U17 Boys Doubles</li>
-              <li>2018 Ranked #4 in Canada for U17 Boys Singles</li>
-              <li>2018 U17 Boys Doubles Ontario Provincial Champion</li>
+              <li>2025 Guarani Open MD and XD Champion</li>
+              <li>2025 Ranked #1 in Canada for Men's Doubles</li>
+              <li>2024 Quebec Senior Open MD National Champion</li>
+              <li>2024 Atlantic Senior Open MD National Champion</li>
               <li>Former Member of the Canadian Junior National Team</li>
             </ul>
             <p>

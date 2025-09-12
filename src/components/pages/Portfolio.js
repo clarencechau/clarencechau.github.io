@@ -68,7 +68,7 @@ function Portfolio() {
       category: "React Native, Typescript",
       img: "../images/tech/shopify.jpg",
       link: "https://www.shopify.com/ca",
-      description: "Working on the Shopify POS Design System",
+      description: "Worked on the Shopify POS Design System (POS X). Heavily involved in major projects such as Polaris Web Components and Animations.",
     },
     {
       name: "Data Engineer",
@@ -98,7 +98,7 @@ function Portfolio() {
 
   const videos = [
     {
-      name: "My First NATIONAL Title",
+      name: "My First NATIONAL Badminton Title",
       img: "../images/tech/youtube1.jpg",
       link: "https://youtu.be/obTF6hIhac8",
       description:
@@ -117,6 +117,13 @@ function Portfolio() {
       link: "https://youtu.be/3_CKKj2MgFM",
       description:
         "The Canadian International Challenge was hosted in my home city, and I got a change to play against a world class pair.",
+    },
+    {
+      name: "I won the BWF Guarani Open... Twice",
+      img: "../images/tech/youtube4.png",
+      link: "https://youtu.be/voReme271FM",
+      description:
+        "Having never played an overseas tournament in my life, I traveled to play the Guarani Open in Paraguay.",
     },
   ];
 
@@ -226,7 +233,7 @@ function Portfolio() {
                   </div>
                   <div className="current-work">
                     <Work className="work-icon" />
-                    <div className="work-name">Software Engineer @ Shopify</div>
+                    <div className="work-name">Prev Software Engineer @ Shopify</div>
                   </div>
 
                   <div className="icons-section">
@@ -336,7 +343,7 @@ function Portfolio() {
               <Grid2 container spacing={2} justifyContent="center">
                 {videos.map((video, index) => (
                   <Grid2 item xs={6} key={index}>
-                    <Card sx={{ maxWidth: 360 }}>
+                    <Card sx={{ maxWidth: 400 }}>
                       <CardActionArea href={video.link} target="_blank">
                         <CardMedia
                           component="img"
@@ -415,7 +422,7 @@ function Portfolio() {
               </div>
               <div className="current-work">
                 <Work className="work-icon" />
-                <div className="work-name">Software Engineer @ Shopify</div>
+                <div className="work-name">Prev Software Engineer @ Shopify</div>
               </div>
 
               <div className="icons-section">
