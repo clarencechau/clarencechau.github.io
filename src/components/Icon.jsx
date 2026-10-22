@@ -4,7 +4,8 @@ import {
 import {
   SiReact, SiTypescript, SiJavascript, SiMysql, SiFirebase, SiPostman, SiHtml5, SiCss,
   SiPython, SiNextdotjs, SiMongodb, SiDocker, SiApachespark, SiApacheairflow, SiPandas,
-  SiNodedotjs, SiGraphql, SiTailwindcss, SiFigma, SiGit, SiPostgresql, SiShopify,
+  SiNodedotjs, SiGraphql, SiTailwindcss, SiFigma, SiGit, SiPostgresql, SiShopify, SiRuby,
+  SiRubyonrails,
 } from "react-icons/si";
 import {
   LuSun, LuMoon, LuArrowUpRight, LuArrowRight, LuArrowUp, LuMapPin, LuMail, LuCopy, LuCheck,
@@ -28,7 +29,7 @@ const ICONS = {
   html: SiHtml5, css: SiCss, python: SiPython, nextjs: SiNextdotjs, mongodb: SiMongodb,
   docker: SiDocker, spark: SiApachespark, airflow: SiApacheairflow, pandas: SiPandas,
   node: SiNodedotjs, graphql: SiGraphql, tailwind: SiTailwindcss, figma: SiFigma, git: SiGit,
-  shopify: SiShopify, database: LuDatabase,
+  shopify: SiShopify, database: LuDatabase, ruby: SiRuby, rails: SiRubyonrails,
   // ui
   sun: LuSun, moon: LuMoon, "arrow-up-right": LuArrowUpRight, "arrow-right": LuArrowRight,
   "arrow-up": LuArrowUp, pin: LuMapPin, copy: LuCopy, check: LuCheck, menu: LuMenu, close: LuX,

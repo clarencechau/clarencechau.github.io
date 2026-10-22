@@ -33,7 +33,7 @@ const config = {
   meta: {
     title: "Clarence Chau — Software Engineer",
     description:
-      "Clarence Chau is a Toronto-based software engineer and nationally-ranked badminton player. Explore his experience, projects and videos.",
+      "Clarence Chau is a Toronto-based software engineer at Shopify and professional badminton player. Explore his experience, projects and videos.",
     url: "https://clarencechau.com",
   },
 
@@ -46,7 +46,7 @@ const config = {
     location: "Toronto, ON",
     /** Little pulsing status pill in the hero. Set to null to hide. */
     status: "Currently in Toronto, ON",
-    avatar: "/images/headshot.jpg",
+    avatar: "/images/profile.jpg",
     email: "clarence.comsci@gmail.com",
     /** Drop a PDF in /public and point to it, e.g. "/resume.pdf". */
     resume: null,
@@ -65,15 +65,19 @@ const config = {
   // ── Hero (top of the page) ───────────────────────────────────────────────
   hero: {
     greeting: "Hi, I'm Clarence 👋",
-    headline: "Software engineer & *nationally-ranked* badminton player.",
+    headline: "Software engineer & *professional* badminton player.",
     tagline:
-      "I design and build full-stack web applications with React, TypeScript and Java — and spend the rest of my time chasing shuttles across Canada and beyond.",
-    image: "/images/pic5.jpg",
-    imageAlt: "Clarence playing badminton at a national tournament",
+      "I build full-stack products at Shopify with Ruby, React and GraphQL — and spend the rest of my time chasing shuttles across Canada and beyond.",
+    image: "/images/profile.jpg",
+    imageAlt: "Portrait of Clarence Chau",
+    /** Shape of the photo frame, e.g. "1 / 1" (square) or "4 / 5" (portrait). */
+    imageAspect: "1 / 1",
+    /** Let visitors grab the floating cards and move them around (double-click resets). */
+    draggableHighlights: true,
     /** Floating cards on the hero photo. */
     highlights: [
       { icon: "trophy", title: "#1 in Canada", subtitle: "Men's Doubles · 2025" },
-      { icon: "code", title: "Software Engineer", subtitle: "React · TypeScript · Java" },
+      { icon: "code", title: "Software Engineer @ Shopify", subtitle: "Ruby · React · GraphQL" },
     ],
     buttons: [
       { label: "See my work", href: "#experience", primary: true },
@@ -88,8 +92,8 @@ const config = {
     title: "A little about me",
     lead: "Software engineer with a passion for designing and programming *full-stack* websites and applications.",
     paragraphs: [
-      "Hello! I'm Clarence, a Software Engineer with proficiency in React, TypeScript, and Java, based in Toronto, Ontario. I am also a student at the University of Toronto, pursuing a degree in Computer Science, Mathematics, and Statistics.",
-      "But there's more to me than just academics and coding. On the athletic side, I'm a nationally-ranked badminton player. I've had the privilege of representing Canada on the junior national team and currently hold the **first-place ranking** in the country for Men's Doubles.",
+      "Hello! I'm Clarence, a Software Engineer at Shopify based in Toronto, Ontario, currently working with Ruby, React, and GraphQL. I am also a student at the University of Toronto, pursuing a degree in Computer Science, Mathematics, and Statistics.",
+      "But there's more to me than just academics and coding. On the athletic side, I'm a professional badminton player. I've had the privilege of representing Canada on the junior national team and currently hold the **first-place ranking** in the country for Men's Doubles.",
       "Both my academic and athletic experiences have armed me with qualities like discipline, punctuality, and leadership, and I'm eager to bring them into any team setting.",
     ],
     /** Quick facts shown as small cards. */
@@ -107,7 +111,9 @@ const config = {
     ],
     skillsTitle: "Tech I work with",
     skills: [
+      { name: "Ruby", icon: "ruby", url: "https://www.ruby-lang.org/" },
       { name: "React", icon: "react", url: "https://react.dev/" },
+      { name: "GraphQL", icon: "graphql", url: "https://graphql.org/" },
       { name: "TypeScript", icon: "typescript", url: "https://www.typescriptlang.org/" },
       { name: "JavaScript", icon: "javascript", url: "https://developer.mozilla.org/docs/Web/JavaScript" },
       { name: "Java", icon: "java", url: "https://www.java.com/" },
@@ -133,6 +139,19 @@ const config = {
       {
         role: "Software Engineer",
         company: "Shopify",
+        team: "", // optional — e.g. your new team's name
+        current: true, // shows a "Current" badge
+        logo: "/images/logos/shopify.png",
+        url: "https://www.shopify.com/ca",
+        period: "", // e.g. "2025 — Present"
+        description:
+          "Building full-stack features on a new team at Shopify, working across Ruby on the backend, React on the frontend, and the GraphQL APIs that connect them.",
+        tags: ["Ruby", "React", "GraphQL"],
+      },
+      {
+        role: "Software Engineer",
+        company: "Shopify",
+        team: "POS Design System",
         logo: "/images/logos/shopify.png",
         url: "https://www.shopify.com/ca",
         period: "", // e.g. "2024 — 2025"

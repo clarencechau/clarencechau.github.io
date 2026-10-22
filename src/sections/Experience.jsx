@@ -28,8 +28,17 @@ export default function Experience({ id, index }) {
                   ) : (
                     <span className="job__company">{job.company}</span>
                   )}
+                  {job.team && <span className="job__team"> · {job.team}</span>}
                 </h3>
-                {job.period && <span className="job__period">{job.period}</span>}
+                <span className="job__meta">
+                  {job.current && (
+                    <span className="job__current">
+                      <span className="pulse" aria-hidden="true" />
+                      Current
+                    </span>
+                  )}
+                  {job.period && <span className="job__period">{job.period}</span>}
+                </span>
               </div>
               <p className="job__desc">
                 <Rich text={job.description} />

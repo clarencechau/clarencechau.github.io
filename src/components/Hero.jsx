@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import site from "../site.config.js";
 import Icon from "./Icon.jsx";
 import Rich from "../lib/rich.jsx";
@@ -27,11 +28,106 @@ function Backdrop() {
   );
 }
 
-export default function Hero() {
-  const { hero, person } = site;
+const clamp = (v, min, max) => Math.min(Math.max(v, min), max);
+
+/**
+ * A floating card on the hero photo. When `draggable`, visitors can grab it and
+ * move it anywhere inside the hero (mouse, pen or touch). Double-click resets it.
+ */
+function HighlightCard({ highlight, index, draggable, boundsRef }) {
+  const ref = useRef(null);
+  const drag = useRef(null);
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const [dragging, setDragging] = useState(false);
+
+  // If the layout width changes (rotate phone, resize window), snap back home.
+  useEffect(() => {
+    if (!draggable) return;
+    let width = window.innerWidth;
+    const onResize = () => {
+      if (window.innerWidth !== width) {
+        width = window.innerWidth;
+        setOffset({ x: 0, y: 0 });
+      }
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [draggable]);
+
+  const onPointerDown = (e) => {
+    if (!draggable || (e.pointerType === "mouse" && e.button !== 0)) return;
+    const card = ref.current.getBoundingClientRect();
+    const area = boundsRef.current.getBoundingClientRect();
+    const navHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--nav-height")) || 0;
+    const pad = 8;
+    // How far the card may travel in each direction before leaving the hero.
+    drag.current = {
+      startX: e.clientX,
+      startY: e.clientY,
+      x: offset.x,
+      y: offset.y,
+      minX: area.left + pad - card.left,
+      maxX: area.right - pad - card.right,
+      minY: Math.max(area.top, navHeight) + pad - card.top,
+      maxY: area.bottom - pad - card.bottom,
+    };
+    ref.current.setPointerCapture(e.pointerId);
+    setDragging(true);
+    e.preventDefault();
+  };
+
+  const onPointerMove = (e) => {
+    const d = drag.current;
+    if (!d) return;
+    setOffset({
+      x: d.x + clamp(e.clientX - d.startX, d.minX, d.maxX),
+      y: d.y + clamp(e.clientY - d.startY, d.minY, d.maxY),
+    });
+  };
+
+  const onPointerUp = () => {
+    drag.current = null;
+    setDragging(false);
+  };
+
+  const classes = [
+    "hero__chip",
+    `hero__chip--${index % 2}`,
+    draggable && "is-draggable",
+    dragging && "is-dragging",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
-    <section id="top" className="hero">
+    <div
+      ref={ref}
+      className={classes}
+      style={{ translate: `${offset.x}px ${offset.y}px` }}
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerUp}
+      onDoubleClick={draggable ? () => setOffset({ x: 0, y: 0 }) : undefined}
+      title={draggable ? "Drag me around \u2014 double-click to reset" : undefined}
+    >
+      <span className="hero__chip-icon">
+        <Icon name={highlight.icon} size={18} />
+      </span>
+      <span>
+        <strong>{highlight.title}</strong>
+        <small>{highlight.subtitle}</small>
+      </span>
+    </div>
+  );
+}
+
+export default function Hero() {
+  const { hero, person } = site;
+  const heroRef = useRef(null);
+
+  return (
+    <section id="top" className="hero" ref={heroRef}>
       <Backdrop />
       <div className="container hero__inner">
         <div className="hero__copy">
@@ -68,19 +164,17 @@ export default function Hero() {
 
         {hero.image && (
           <div className="hero__visual">
-            <div className="hero__photo">
+            <div className="hero__photo" style={hero.imageAspect ? { aspectRatio: hero.imageAspect } : undefined}>
               <img src={hero.image} alt={hero.imageAlt ?? ""} fetchPriority="high" />
             </div>
             {hero.highlights?.map((h, i) => (
-              <div key={h.title} className={`hero__chip hero__chip--${i % 2}`}>
-                <span className="hero__chip-icon">
-                  <Icon name={h.icon} size={18} />
-                </span>
-                <span>
-                  <strong>{h.title}</strong>
-                  <small>{h.subtitle}</small>
-                </span>
-              </div>
+              <HighlightCard
+                key={h.title}
+                highlight={h}
+                index={i}
+                draggable={Boolean(hero.draggableHighlights)}
+                boundsRef={heroRef}
+              />
             ))}
           </div>
         )}

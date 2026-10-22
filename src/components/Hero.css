@@ -33,33 +33,6 @@
   font-weight: 500;
   color: var(--text-2);
 }
-.pulse {
-  position: relative;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #22c55e;
-}
-.pulse::after {
-  content: "";
-  position: absolute;
-  inset: -4px;
-  border-radius: 50%;
-  border: 2px solid #22c55e;
-  animation: ping 2.2s var(--ease) infinite;
-}
-@keyframes ping {
-  0% {
-    transform: scale(0.5);
-    opacity: 0.9;
-  }
-  80%,
-  100% {
-    transform: scale(1.7);
-    opacity: 0;
-  }
-}
-
 .hero__greeting {
   margin: 0 0 10px;
   font-size: 1.125rem;
@@ -153,6 +126,28 @@
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: #fff;
 }
+/* Draggable cards: the float animation uses `transform`, the drag offset uses
+   the separate `translate` property, so the two never fight each other. */
+.hero__chip.is-draggable {
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  transition: translate 0.5s var(--ease), scale 0.2s var(--ease), box-shadow 0.2s, border-color 0.2s;
+}
+.hero__chip.is-draggable:hover {
+  border-color: var(--accent-border);
+}
+.hero__chip.is-dragging {
+  z-index: 5;
+  cursor: grabbing;
+  scale: 1.05;
+  border-color: var(--accent-border);
+  box-shadow: 0 24px 48px -16px rgb(0 0 0 / 0.45), 0 0 0 4px var(--accent-soft);
+  animation-play-state: paused;
+  transition: scale 0.2s var(--ease), box-shadow 0.2s;
+}
+
 .hero__chip--0 {
   left: -44px;
   bottom: 64px;
