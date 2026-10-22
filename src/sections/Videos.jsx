@@ -17,6 +17,13 @@ export default function Videos({ id, index }) {
   });
   const stats = useYouTubeStats(items.map((i) => i.videoId));
 
+  // Most-viewed first once live counts arrive; otherwise keep the config order.
+  // (Array.sort is stable, so videos without stats keep their relative order.)
+  const ordered =
+    v.sortBy === "views" && Object.keys(stats).length > 0
+      ? [...items].sort((a, b) => (stats[b.videoId]?.views ?? -1) - (stats[a.videoId]?.views ?? -1))
+      : items;
+
   const channelLink = v.channelUrl && (
     <a href={v.channelUrl} target="_blank" rel="noreferrer" className="btn btn--ghost btn--sm">
       <Icon name="youtube" /> Visit channel
@@ -26,7 +33,7 @@ export default function Videos({ id, index }) {
   return (
     <Section id={id} index={index} eyebrow={v.eyebrow} title={v.title} aside={channelLink}>
       <ul className="videos">
-        {items.map((item) => {
+        {ordered.map((item) => {
           const s = stats[item.videoId];
           return (
             <li key={item.url} className="reveal">

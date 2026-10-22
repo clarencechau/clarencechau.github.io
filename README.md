@@ -24,6 +24,7 @@ Almost everything lives in **[`src/site.config.js`](src/site.config.js)** — no
 | Edit the headline, bio, jobs, etc.    | `hero`, `about`, `experience`, `projects`, `athletics`, `videos`          |
 | Highlight a word                      | Wrap it in `*asterisks*` (accent gradient) or `**double**` (bold)         |
 | Feature a project full-width          | `featured: true` on the project                                           |
+| Order YouTube videos                  | `videos.sortBy` — `"views"` (most-viewed first, live) or `"manual"`      |
 | Mark your current job / add a team    | `current: true` and `team: "…"` on an experience item                    |
 | Change the hero photo frame shape     | `hero.imageAspect` — e.g. `"1 / 1"` or `"4 / 5"`                          |
 | Choose which part of the photo shows  | `hero.imagePosition` — CSS object-position, e.g. `"50% 30%"`            |

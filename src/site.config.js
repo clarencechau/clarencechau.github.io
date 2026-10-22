@@ -280,20 +280,16 @@ const config = {
     eyebrow: "youtube",
     title: "Vlogging the journey",
     channelUrl: "https://www.youtube.com/@clarencechauu",
+    /** "views" = most-viewed first, using live counts (falls back to the order below);
+     *  "manual" = always use the order below. */
+    sortBy: "views",
     items: [
       {
-        title: "I won the BWF Guarani Open… Twice",
-        url: "https://youtu.be/voReme271FM",
-        thumbnail: "/images/videos/guarani-open.jpg",
+        title: "My First NATIONAL Badminton Title",
+        url: "https://youtu.be/obTF6hIhac8",
+        thumbnail: "/images/videos/first-national-title.jpg",
         description:
-          "Having never played an overseas tournament in my life, I traveled to play the Guarani Open in Paraguay.",
-      },
-      {
-        title: "I Played Against World No. 72",
-        url: "https://youtu.be/3_CKKj2MgFM",
-        thumbnail: "/images/videos/world-no-72.jpg",
-        description:
-          "The Canadian International Challenge was hosted in my home city, and I got a chance to play against a world-class pair.",
+          "I traveled across Canada to Moncton, New Brunswick, vlogging the journey of obtaining my first Canadian national title.",
       },
       {
         title: "Can We Win Nationals AGAIN??",
@@ -303,11 +299,18 @@ const config = {
           "After my first national title, I flew to Quebec City to try and win back-to-back men's doubles national gold.",
       },
       {
-        title: "My First NATIONAL Badminton Title",
-        url: "https://youtu.be/obTF6hIhac8",
-        thumbnail: "/images/videos/first-national-title.jpg",
+        title: "I Played Against World No. 72",
+        url: "https://youtu.be/3_CKKj2MgFM",
+        thumbnail: "/images/videos/world-no-72.jpg",
         description:
-          "I traveled across Canada to Moncton, New Brunswick, vlogging the journey of obtaining my first Canadian national title.",
+          "The Canadian International Challenge was hosted in my home city, and I got a chance to play against a world-class pair.",
+      },
+      {
+        title: "I won the BWF Guarani Open… Twice",
+        url: "https://youtu.be/voReme271FM",
+        thumbnail: "/images/videos/guarani-open.jpg",
+        description:
+          "Having never played an overseas tournament in my life, I traveled to play the Guarani Open in Paraguay.",
       },
     ],
   },
