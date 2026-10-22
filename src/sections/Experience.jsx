@@ -50,9 +50,11 @@ export default function Experience({ id, index }) {
                   {job.period && <span className="job__period">{job.period}</span>}
                 </span>
               </div>
-              <p className="job__desc">
-                <Rich text={job.description} />
-              </p>
+              {job.description && (
+                <p className="job__desc">
+                  <Rich text={job.description} />
+                </p>
+              )}
               {job.tags?.length > 0 && (
                 <ul className="tags">
                   {job.tags.map((t) => (

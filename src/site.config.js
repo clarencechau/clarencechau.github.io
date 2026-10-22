@@ -68,16 +68,20 @@ const config = {
     headline: "Software engineer & *professional* badminton player.",
     tagline:
       "I build full-stack products at Shopify with Ruby, React and GraphQL — and spend the rest of my time chasing shuttles across Canada and beyond.",
-    image: "/images/profile.jpg",
-    imageAlt: "Portrait of Clarence Chau",
+    image: "/images/hero.jpg",
+    imageAlt: "Clarence standing on a balcony by the ocean at night",
     /** Shape of the photo frame, e.g. "1 / 1" (square) or "4 / 5" (portrait). */
-    imageAspect: "1 / 1",
+    imageAspect: "4 / 5",
+    /** Which part of the photo to keep when it's cropped to the frame (CSS object-position). */
+    imagePosition: "50% 50%",
     /** Let visitors grab the floating cards and move them around (double-click resets). */
     draggableHighlights: true,
-    /** Floating cards on the hero photo. */
+    /** Floating cards around the hero photo (up to 4 have preset spots). */
     highlights: [
       { icon: "trophy", title: "Former #1 in Canada", subtitle: "Men's Doubles · 2025" },
       { icon: "code", title: "Software Engineer @ Shopify", subtitle: "Ruby · React · GraphQL" },
+      { icon: "medal", title: "3× BWF International Champion" },
+      { icon: "youtube", title: "Badminton vlogs", subtitle: "@clarencechauu on YouTube" },
     ],
     buttons: [
       { label: "See my work", href: "#experience", primary: true },
@@ -144,8 +148,7 @@ const config = {
         logo: "/images/logos/shopify.png",
         url: "https://www.shopify.com/ca",
         period: "", // e.g. "2025 — Present"
-        description:
-          "Building full-stack features on a new team at Shopify, working across Ruby on the backend, React on the frontend, and the GraphQL APIs that connect them.",
+        description: "", // TODO: add a line about the Tax Calculations team
         tags: ["Ruby", "React", "GraphQL"],
       },
       {

@@ -26,6 +26,7 @@ Almost everything lives in **[`src/site.config.js`](src/site.config.js)** — no
 | Feature a project full-width          | `featured: true` on the project                                           |
 | Mark your current job / add a team    | `current: true` and `team: "…"` on an experience item                    |
 | Change the hero photo frame shape     | `hero.imageAspect` — e.g. `"1 / 1"` or `"4 / 5"`                          |
+| Choose which part of the photo shows  | `hero.imagePosition` — CSS object-position, e.g. `"50% 30%"`            |
 | Turn draggable hero cards on/off      | `hero.draggableHighlights` (double-click a card to reset it)              |
 | Add a résumé button                   | Drop `resume.pdf` in `/public` and set `person.resume: "/resume.pdf"`     |
 | Add a social link / skill icon        | Use any name from [`src/components/Icon.jsx`](src/components/Icon.jsx)    |

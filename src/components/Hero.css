@@ -148,14 +148,31 @@
   transition: scale 0.2s var(--ease), box-shadow 0.2s;
 }
 
+/* Four preset spots, zig-zagging around the photo and clear of the face:
+   0 bottom-left, 1 middle-right, 2 top-left (over the edge), 3 lower-right */
+.hero__visual {
+  /* Space between the container edge and the screen edge — cards on the
+     right may poke out into it, but never past the screen. */
+  --gutter: calc((100vw - min(100vw - 48px, var(--container))) / 2);
+}
 .hero__chip--0 {
-  left: -44px;
-  bottom: 64px;
+  left: -56px;
+  bottom: 28px;
 }
 .hero__chip--1 {
-  right: -28px;
-  top: 36px;
+  right: max(-36px, calc(14px - var(--gutter)));
+  top: 38%;
   animation-delay: -3.5s;
+}
+.hero__chip--2 {
+  left: -64px;
+  top: -36px;
+  animation-delay: -1.8s;
+}
+.hero__chip--3 {
+  right: max(-28px, calc(14px - var(--gutter)));
+  bottom: 25%;
+  animation-delay: -5.2s;
 }
 @keyframes float {
   50% {
@@ -248,12 +265,24 @@
   .hero__visual {
     justify-self: center;
     max-width: 340px;
+    margin-top: 28px; /* room for the card that pokes above the photo */
   }
   .hero__chip--0 {
     left: -20px;
+    bottom: auto;
+    top: 62%;
   }
   .hero__chip--1 {
     right: -16px;
+    top: 36%;
+  }
+  .hero__chip--2 {
+    left: -14px;
+    top: -38px;
+  }
+  .hero__chip--3 {
+    right: -14px;
+    bottom: -22px;
   }
   .hero__blob--1 {
     width: 340px;
@@ -270,7 +299,7 @@
 
 @media (max-width: 420px) {
   .hero__visual {
-    max-width: 280px;
+    max-width: 300px;
   }
   .hero__chip {
     padding: 8px 12px 8px 8px;

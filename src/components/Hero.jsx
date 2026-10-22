@@ -92,7 +92,7 @@ function HighlightCard({ highlight, index, draggable, boundsRef }) {
 
   const classes = [
     "hero__chip",
-    `hero__chip--${index % 2}`,
+    `hero__chip--${index % 4}`,
     draggable && "is-draggable",
     dragging && "is-dragging",
   ]
@@ -116,7 +116,7 @@ function HighlightCard({ highlight, index, draggable, boundsRef }) {
       </span>
       <span>
         <strong>{highlight.title}</strong>
-        <small>{highlight.subtitle}</small>
+        {highlight.subtitle && <small>{highlight.subtitle}</small>}
       </span>
     </div>
   );
@@ -165,7 +165,12 @@ export default function Hero() {
         {hero.image && (
           <div className="hero__visual">
             <div className="hero__photo" style={hero.imageAspect ? { aspectRatio: hero.imageAspect } : undefined}>
-              <img src={hero.image} alt={hero.imageAlt ?? ""} fetchPriority="high" />
+              <img
+                src={hero.image}
+                alt={hero.imageAlt ?? ""}
+                fetchPriority="high"
+                style={hero.imagePosition ? { objectPosition: hero.imagePosition } : undefined}
+              />
             </div>
             {hero.highlights?.map((h, i) => (
               <HighlightCard
