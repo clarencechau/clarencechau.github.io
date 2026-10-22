@@ -18,17 +18,27 @@ export default function Experience({ id, index }) {
             <div className="job__body">
               <div className="job__head">
                 <h3 className="job__title">
-                  {job.role}
-                  <span className="job__at"> @ </span>
-                  {job.url ? (
-                    <a href={job.url} target="_blank" rel="noreferrer" className="job__company">
-                      {job.company}
-                      <Icon name="arrow-up-right" size={14} />
-                    </a>
-                  ) : (
-                    <span className="job__company">{job.company}</span>
+                  {job.role}{" "}
+                  {/* Keep "@ Company" together so it never splits across lines. */}
+                  <span className="job__where">
+                    <span className="job__at">@ </span>
+                    {job.url ? (
+                      <a href={job.url} target="_blank" rel="noreferrer" className="job__company">
+                        {job.company}
+                        <Icon name="arrow-up-right" size={14} />
+                      </a>
+                    ) : (
+                      <span className="job__company">{job.company}</span>
+                    )}
+                  </span>
+                  {job.team && (
+                    <span className="job__team">
+                      <span className="job__sep" aria-hidden="true">
+                        {" · "}
+                      </span>
+                      {job.team}
+                    </span>
                   )}
-                  {job.team && <span className="job__team"> · {job.team}</span>}
                 </h3>
                 <span className="job__meta">
                   {job.current && (

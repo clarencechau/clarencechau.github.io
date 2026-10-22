@@ -76,7 +76,7 @@ const config = {
     draggableHighlights: true,
     /** Floating cards on the hero photo. */
     highlights: [
-      { icon: "trophy", title: "#1 in Canada", subtitle: "Men's Doubles · 2025" },
+      { icon: "trophy", title: "Former #1 in Canada", subtitle: "Men's Doubles · 2025" },
       { icon: "code", title: "Software Engineer @ Shopify", subtitle: "Ruby · React · GraphQL" },
     ],
     buttons: [
@@ -93,14 +93,14 @@ const config = {
     lead: "Software engineer with a passion for designing and programming *full-stack* websites and applications.",
     paragraphs: [
       "Hello! I'm Clarence, a Software Engineer at Shopify based in Toronto, Ontario, currently working with Ruby, React, and GraphQL. I am also a student at the University of Toronto, pursuing a degree in Computer Science, Mathematics, and Statistics.",
-      "But there's more to me than just academics and coding. On the athletic side, I'm a professional badminton player. I've had the privilege of representing Canada on the junior national team and currently hold the **first-place ranking** in the country for Men's Doubles.",
+      "But there's more to me than just academics and coding. On the athletic side, I'm a professional badminton player. I've had the privilege of representing Canada on the junior national team and was formerly ranked **#1 in Canada** for Men's Doubles.",
       "Both my academic and athletic experiences have armed me with qualities like discipline, punctuality, and leadership, and I'm eager to bring them into any team setting.",
     ],
     /** Quick facts shown as small cards. */
     facts: [
       { label: "Based in", value: "Toronto, ON" },
       { label: "Studying", value: "CS, Math & Stats @ UofT" },
-      { label: "Ranked", value: "#1 Men's Doubles 🇨🇦" },
+      { label: "Formerly ranked", value: "#1 Men's Doubles 🇨🇦" },
     ],
     /** 1–4 photos for the collage. */
     photos: [
@@ -139,7 +139,7 @@ const config = {
       {
         role: "Software Engineer",
         company: "Shopify",
-        team: "", // optional — e.g. your new team's name
+        team: "Tax Calculations",
         current: true, // shows a "Current" badge
         logo: "/images/logos/shopify.png",
         url: "https://www.shopify.com/ca",
@@ -162,6 +162,7 @@ const config = {
       {
         role: "Data Engineer",
         company: "Scotiabank",
+        team: "CID&A Consumption Analytics",
         logo: "/images/logos/scotiabank.png",
         url: "https://www.scotiabank.com/ca/en/personal.html",
         period: "",
@@ -172,6 +173,7 @@ const config = {
       {
         role: "Software Engineer",
         company: "Moneris",
+        team: "Chargebacks Rewrite",
         logo: "/images/logos/moneris.png",
         url: "https://www.moneris.com/",
         period: "",
@@ -182,6 +184,7 @@ const config = {
       {
         role: "Software Engineer",
         company: "Aireum",
+        team: "Admin Platform",
         logo: "/images/logos/aireum.png",
         url: "http://www.aireum.ca/",
         period: "",
@@ -254,7 +257,7 @@ const config = {
       "These accomplishments were forged through countless hours in the gym, relentlessly pursuing self-improvement. That same mentality carries straight into how I approach code — investing the time to keep learning and keep evolving as a programmer.",
     image: "/images/pic1.jpg",
     imageAlt: "Clarence holding a national championship award with his doubles partner",
-    stat: { value: "#1", label: "Men's Doubles ranking in Canada (2025)" },
+    stat: { value: "#1", label: "Former Men's Doubles ranking in Canada" },
     achievements: [
       { year: "2025", title: "Guarani Open", detail: "Men's & Mixed Doubles Champion" },
       { year: "2025", title: "Ranked #1 in Canada", detail: "Men's Doubles" },

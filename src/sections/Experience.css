@@ -94,6 +94,9 @@
 a.job__company:hover svg {
   transform: translate(2px, -2px);
 }
+.job__where {
+  white-space: nowrap;
+}
 .job__team {
   font-weight: 400;
   color: var(--muted);
@@ -147,5 +150,13 @@ a.job__company:hover svg {
   }
   .job__logo {
     border-radius: 12px;
+  }
+  /* On phones the team gets its own line instead of a "·" separator. */
+  .job__team {
+    display: block;
+    font-size: 0.95rem;
+  }
+  .job__sep {
+    display: none;
   }
 }
