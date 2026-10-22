@@ -262,7 +262,7 @@ const config = {
     imageAlt: "Clarence holding a national championship award with his doubles partner",
     stat: { value: "#1", label: "Former Men's Doubles ranking in Canada" },
     achievements: [
-      { year: "2026", title: "Canadian Senior National Championship", detail: "Bronze Medal", icon: "medal" },
+      { year: "2026", title: "Canadian Senior National Championship", detail: "Men's Doubles Bronze Medal", icon: "medal" },
       { year: "2025", title: "Santo Domingo Open", detail: "Men's Doubles Champion" },
       { year: "2025", title: "Guarani Open", detail: "Men's & Mixed Doubles Champion" },
       { year: "2025", title: "Ranked #1 in Canada", detail: "Men's Doubles" },
