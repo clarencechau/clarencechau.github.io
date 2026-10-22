@@ -1,0 +1,122 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+.nav--solid {
+  background: color-mix(in oklab, var(--bg) 78%, transparent);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  border-bottom-color: var(--border);
+}
+
+/* Solid while the mobile menu is open so the page doesn't bleed through. */
+.nav--open {
+  background: var(--bg);
+  box-shadow: 0 24px 48px -24px rgb(0 0 0 / 0.45);
+}
+
+.nav__inner {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 620;
+  letter-spacing: -0.015em;
+}
+.nav__brand img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px var(--accent-border);
+}
+
+.nav__links {
+  display: flex;
+  gap: 2px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--bg-elev) 65%, transparent);
+  backdrop-filter: blur(10px);
+}
+.nav__links a {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  transition: color 0.2s, background-color 0.2s;
+}
+.nav__links a:hover {
+  color: var(--text);
+}
+.nav__links a.is-active {
+  color: var(--text);
+  background: var(--bg-subtle);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav__menu {
+  display: none;
+}
+
+.nav__panel {
+  max-height: calc(100svh - var(--nav-height));
+  overflow-y: auto;
+}
+.nav__panel nav {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0 24px;
+}
+.nav__panel nav > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 2px;
+  border-bottom: 1px solid var(--border);
+  font-size: 18px;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+}
+.nav__panel nav > a svg {
+  color: var(--muted);
+}
+.nav__panel-socials {
+  display: flex;
+  gap: 8px;
+  padding-top: 20px;
+}
+.nav__panel[hidden] {
+  display: none;
+}
+
+@media (max-width: 880px) {
+  .nav__links {
+    display: none;
+  }
+  .nav__menu {
+    display: inline-grid;
+  }
+}
+@media (min-width: 881px) {
+  .nav__panel {
+    display: none;
+  }
+}

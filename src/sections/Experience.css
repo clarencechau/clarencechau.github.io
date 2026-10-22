@@ -1,0 +1,119 @@
+.timeline {
+  --logo: 56px;
+  --pad: 24px;
+  position: relative;
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* The vertical line that threads through the logos. */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--pad) + var(--logo) / 2);
+  bottom: calc(var(--pad) + var(--logo) / 2);
+  left: calc(var(--logo) / 2);
+  width: 1px;
+  background: linear-gradient(var(--accent-border), var(--border-strong) 30%, var(--border));
+}
+
+.job {
+  display: grid;
+  grid-template-columns: var(--logo) 1fr;
+  gap: 24px;
+  padding: var(--pad);
+  margin-inline: calc(var(--pad) * -1);
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s, opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.has-reveal .job.reveal {
+  transition: background-color 0.3s, border-color 0.3s, opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.job:hover {
+  background: var(--bg-elev);
+  border-color: var(--border);
+}
+
+.job__logo {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: var(--logo);
+  height: var(--logo);
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  box-shadow: 0 0 0 6px var(--bg);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--accent-text);
+  transition: box-shadow 0.3s;
+}
+.job:hover .job__logo {
+  box-shadow: 0 0 0 6px var(--bg-elev);
+}
+.job__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.job__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-bottom: 8px;
+}
+.job__title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 620;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+.job__at {
+  font-weight: 400;
+  color: var(--muted);
+}
+.job__company {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--accent-text);
+}
+.job__company svg {
+  transition: transform 0.2s var(--ease);
+}
+a.job__company:hover svg {
+  transform: translate(2px, -2px);
+}
+.job__period {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+.job__desc {
+  max-width: 72ch;
+  margin: 0 0 14px;
+  color: var(--text-2);
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    --logo: 44px;
+    --pad: 16px;
+  }
+  .job {
+    gap: 16px;
+  }
+  .job__logo {
+    border-radius: 12px;
+  }
+}

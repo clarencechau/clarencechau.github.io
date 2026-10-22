@@ -1,8 +1,17 @@
-# node modules
+# dependencies
 node_modules/
 
+# build output
+dist/
+build/
 
-#eslint
+# env
+.env
+.env.*
+!.env.example
+
+# misc
+.DS_Store
 .eslintcache
 *.pack
-.env
+*.log

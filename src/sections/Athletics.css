@@ -1,0 +1,126 @@
+.athletics {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
+  gap: clamp(32px, 6vw, 80px);
+}
+
+.athletics__media {
+  position: sticky;
+  top: calc(var(--nav-height) + 32px);
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
+  box-shadow: var(--shadow);
+}
+.athletics__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stat {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 18px;
+  background: rgb(10 10 12 / 0.55);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid rgb(255 255 255 / 0.16);
+  color: #fff;
+}
+.stat__value {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+.stat__label {
+  font-size: 14px;
+  line-height: 1.35;
+  opacity: 0.88;
+}
+
+.athletics__intro {
+  margin: 0 0 28px;
+  font-size: clamp(1.1rem, 1.6vw, 1.25rem);
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.achievements {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+.achievement {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px 14px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  transition: border-color 0.25s, transform 0.25s var(--ease);
+}
+.achievement:hover {
+  border-color: var(--accent-border);
+  transform: translateX(4px);
+}
+.achievement__icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+.achievement__text strong {
+  display: block;
+  font-weight: 620;
+  line-height: 1.35;
+}
+.achievement__text small {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+}
+.achievement__year {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+.athletics__outro {
+  margin: 0;
+  color: var(--text-2);
+}
+
+@media (max-width: 900px) {
+  .athletics {
+    grid-template-columns: 1fr;
+  }
+  .athletics__media {
+    position: relative;
+    top: 0;
+    aspect-ratio: 4 / 3;
+    max-width: 560px;
+  }
+}
